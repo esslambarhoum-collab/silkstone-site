@@ -1,0 +1,23 @@
+# Silkstone Fashion
+
+> Knitwear garment manufacturer in 10th of Ramadan City, Egypt. A 50/50 partnership between Boldbridge Capital (UK-headquartered group, operating in Egypt, Saudi Arabia and the UAE) and Aletex Group (Barcelona, Spain). Cuts, sews, prints, embroiders and packs under one roof.
+
+- Products: T-shirts, sweatshirts, hoodies and jersey basics, made to the buyer's tech pack.
+- Capacity: 16 active sewing lines, 33 at full capacity.
+- Minimum order: 20,000 pieces per style. Trial order: 10,000 pieces.
+- Certifications and audits: WRAP, Sedex (SMETA), ISO 9001, ISO 14001, ISO 45001, GOTS, OCS, RCS, GRS.
+- Customers include H&M, DeFacto and LC Waikiki, plus retailers in the United States. Ships worldwide.
+- In house: computerised auto-cutting, rotary and continuous printing, embroidery, metal detection before packing, sample development, 100% fabric inspection, ERP with client access to production status.
+- Trade access: duty free into the EU and UK under the Egypt association agreements, and into the United States under the QIZ scheme.
+- Address: Plot No. 236, 6 Million Area, Southern Industrial Zone, 10th of Ramadan City, Egypt.
+- Email: info@silkstone-textile.com
+
+## Pages
+- /about.html: the company and its two partners
+- /capabilities.html: the seven-stage process and equipment
+- /products.html: the range with specifications and 3D models
+- /quality.html: quality checkpoints and certificates
+- /traced-order.html: how one order is recorded from roll to carton
+- /egypt.html: why manufacture in Egypt
+- /techpack.html: free tech pack generator
+- /contact.html: quotes, samples and questions
