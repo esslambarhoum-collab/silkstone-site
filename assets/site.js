@@ -42,6 +42,16 @@
     rv.forEach(function (el) { io.observe(el); });
   } else { rv.forEach(function (el) { el.classList.add('in'); }); }
 
+
+  /* Count-up figures (data-count) */
+  var counters=document.querySelectorAll('[data-count]');
+  if(counters.length){
+    var fmt=function(n){return n.toLocaleString('en-GB');};
+    var run=function(el){ if(el.dataset.done) return; el.dataset.done='1'; var end=parseInt(el.dataset.count,10); if(reduce||!end){el.textContent=fmt(end);return;} var t0=null,dur=1400; var step=function(t){ if(!t0)t0=t; var p=Math.min(1,(t-t0)/dur); p=1-Math.pow(1-p,3); el.textContent=fmt(Math.round(end*p)); if(p<1) requestAnimationFrame(step); }; requestAnimationFrame(step); };
+    if('IntersectionObserver' in window){ var cio=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){ run(e.target); cio.unobserve(e.target);} });},{rootMargin:'0px 0px -10% 0px'}); counters.forEach(function(c){cio.observe(c);}); }
+    else counters.forEach(run);
+  }
+
   /* Stitched process line */
   var proc = document.querySelector('.stages');
   if (proc) {
