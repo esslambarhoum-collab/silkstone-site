@@ -1,6 +1,6 @@
 /* Silkstone Fashion · site styles
    Palette: white, bone, ash, graphite, black. Sand only as a background tint.
-   Type: Zen Kaku Gothic New 300 / 400 / 500. */
+   Type: Archivo Black (stone), Bodoni Moda italic (silk), Archivo 300 (body). */
 
 :root{
   --white:#FFFFFF;
@@ -102,7 +102,7 @@ body.menu-open .burger span:nth-child(3){transform:translateY(-6px) rotate(-45de
 .hero-stone{position:relative;min-height:min(86vh,900px);display:grid;align-items:end;padding:clamp(150px,20vw,220px) 0 clamp(64px,8vw,110px);background:var(--bone) url(img/limestone.jpg) center/cover no-repeat;isolation:isolate}
 .hero-stone::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(243,241,236,.55) 0%,rgba(243,241,236,.28) 40%,rgba(243,241,236,.82) 100%);z-index:-1}
 .hero-stone .label{display:block;margin-bottom:26px;color:var(--graphite)}
-.hero-stone h1{font-size:clamp(34px,4.8vw,68px);max-width:15ch;line-height:1}
+.hero-stone h1{font-size:clamp(32px,4.3vw,62px);max-width:17ch;line-height:1}
 .hero-stone .silk-line{display:block;margin-top:22px;font-size:clamp(24px,2.6vw,38px);color:var(--graphite);line-height:1.2}
 .hero-stone .lead{margin-top:26px;color:var(--graphite);max-width:42ch;font-size:17px}
 .hero-stone .hero-actions{margin-top:40px}
@@ -114,22 +114,22 @@ body.menu-open .burger span:nth-child(3){transform:translateY(-6px) rotate(-45de
 
 /* landing: stone slab and silk */
 .slab-wrap{position:relative;padding:clamp(120px,14vw,190px) 0 clamp(80px,10vw,140px)}
-.slab{position:relative;background:linear-gradient(rgba(21,21,19,.78),rgba(21,21,19,.86)),url(img/limestone.jpg) center/cover no-repeat;color:var(--bone);padding:clamp(40px,6vw,84px) clamp(24px,5vw,72px);box-shadow:var(--shadow)}
-.slab .figs{border:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,3vw,48px)}
+.slab{position:relative;background:linear-gradient(rgba(21,21,19,.78),rgba(21,21,19,.86)),url(img/limestone.jpg) center/cover no-repeat;color:var(--bone);padding:clamp(120px,13vw,170px) clamp(24px,5vw,72px) clamp(40px,6vw,84px);box-shadow:var(--shadow)}
+.slab .figs{border:0;display:grid;grid-template-columns:.8fr 1.25fr 1.25fr .9fr;gap:clamp(20px,3vw,48px)}
 .slab .figs>div{border:0;border-left:1px solid rgba(243,241,236,.18);padding:6px 0 6px clamp(16px,2vw,28px)}
 .slab .figs>div:first-child{border-left:0;padding-left:0}
-.slab .figs b{font-family:var(--stone);font-weight:400;font-size:clamp(40px,4.6vw,68px);color:var(--white);margin:0 0 6px;letter-spacing:-.02em}
+.slab .figs b{font-family:var(--stone);font-weight:400;font-size:clamp(36px,4vw,58px);color:var(--white);margin:0 0 6px;letter-spacing:-.02em;white-space:nowrap}
 .slab .figs i{display:block;font-family:var(--silk);font-style:italic;font-size:clamp(18px,1.6vw,22px);color:var(--bone);font-variation-settings:"opsz" 48}
 .slab .figs small{color:#B4AFA3;margin-top:8px}
-.silk-ribbon{position:absolute;left:-2%;right:-2%;top:-1px;height:auto;transform:translateY(-52%);pointer-events:none;overflow:visible}
-.silk-ribbon .r{fill:none;stroke:url(#silkGrad);stroke-width:64;stroke-linecap:round;opacity:.96}
-.silk-ribbon .s{fill:none;stroke:rgba(255,255,255,.75);stroke-width:6;stroke-linecap:round}
+.silk-ribbon{position:absolute;left:-3%;right:-3%;top:0;height:200px;transform:translateY(-50%);pointer-events:none;overflow:visible;z-index:2;filter:drop-shadow(0 18px 28px rgba(21,21,19,.28))}
+.silk-ribbon .r{fill:none;stroke:url(#silkGrad);stroke-width:58;stroke-linecap:round;opacity:.97}
+.silk-ribbon .s{fill:none;stroke:rgba(255,255,255,.85);stroke-width:5;stroke-linecap:round}
 .silk-ribbon.rv.in .r,.silk-ribbon.rv.in .s{stroke-dasharray:1;stroke-dashoffset:0}
 @media (prefers-reduced-motion:no-preference){
   .silk-ribbon .r,.silk-ribbon .s{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.4s var(--ease)}
   .silk-ribbon.in .r,.silk-ribbon.in .s{stroke-dashoffset:0}
   .silk-ribbon.in{animation:drift 9s ease-in-out 2.4s infinite}
-  @keyframes drift{0%,100%{transform:translateY(-52%)}50%{transform:translateY(-49%)}}
+  @keyframes drift{0%,100%{transform:translateY(-50%)}50%{transform:translateY(-46%)}}
 }
 .slab-line{text-align:center;margin-top:clamp(40px,5vw,64px)}
 .slab-line .silk{font-size:clamp(26px,3vw,40px);color:var(--black)}
@@ -353,6 +353,7 @@ footer h4{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var
 footer a{display:block;padding:3px 0}
 footer a:hover{color:var(--black)}
 footer .bottom{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px;color:var(--ash)}
+footer .bottom a{display:inline;padding:0}
 @media (max-width:900px){footer .cols{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){footer .cols{grid-template-columns:1fr}}
 
