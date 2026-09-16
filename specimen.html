@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silkstone Type Specimen</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;800&family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500&family=Archivo+Black&family=Archivo:wght@300;400;500&family=Bodoni+Moda:ital,opsz,wght@1,6..96,400;1,6..96,500&family=Anton&family=Italiana&family=Albert+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--white:#fff;--bone:#F3F1EC;--ash:#9B978F;--graphite:#4A4844;--black:#151513;--line:rgba(21,21,19,.12);--brass:#A8875A}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bone);color:var(--black);font-family:"Manrope",system-ui,sans-serif;font-weight:300;line-height:1.6}
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px)}
+header{padding:64px 0 32px;border-bottom:1px solid var(--line)}
+header h1{font-family:"Manrope";font-weight:400;font-size:22px;margin:0 0 8px;letter-spacing:-.01em}
+header p{max-width:62ch;color:var(--graphite);margin:0}
+.label{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--ash)}
+.opt{padding:72px 0;border-bottom:1px solid var(--line)}
+.opt-head{display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+.opt-head .name{font-size:14px;color:var(--graphite)}
+.opt-head .name b{font-weight:500;color:var(--black);font-family:"Manrope";font-size:16px;margin-right:12px}
+.stage{background:var(--white);border:1px solid var(--line);padding:clamp(28px,5vw,64px);position:relative;overflow:hidden}
+.stage.dark{background:var(--black);color:var(--bone);border-color:transparent}
+.nav{display:flex;align-items:center;gap:32px;font-size:12px;letter-spacing:.06em;color:var(--ash);margin-bottom:clamp(40px,7vw,96px)}
+.nav .brand{margin-right:auto;display:flex;align-items:center;gap:10px;color:var(--black);letter-spacing:.32em;font-size:12px}
+.dark .nav .brand{color:var(--bone)}
+.nav svg{width:30px;overflow:visible}
+.nav svg path{fill:none;stroke:currentColor;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.h{margin:0;line-height:.98;letter-spacing:-.01em;max-width:13ch;text-wrap:balance}
+.h em{font-style:italic;font-weight:400;color:var(--brass)}
+.lead{max-width:44ch;margin:28px 0 0;color:var(--graphite);font-size:18px}
+.dark .lead{color:#B4AFA3}
+.figs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:clamp(40px,6vw,80px);padding-top:32px;border-top:1px solid var(--line)}
+.dark .figs{border-color:rgba(243,241,236,.18)}
+.figs b{display:block;font-weight:400;line-height:1;font-size:clamp(44px,5vw,72px)}
+.figs i{display:block;font-style:italic;font-size:20px;margin-top:6px;color:var(--brass)}
+.figs small{display:block;font-size:13px;color:var(--ash);margin-top:6px}
+.doors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;margin-top:2px}
+.door{position:relative;aspect-ratio:4/3;overflow:hidden;background:#ddd}
+.door img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.7)}
+.door span{position:absolute;left:22px;bottom:18px;color:#fff;font-size:clamp(20px,2.4vw,30px);text-shadow:0 2px 24px rgba(0,0,0,.5)}
+.door span i{font-style:italic;font-weight:400}
+.body{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px;font-size:15px;color:var(--graphite)}
+.body p{margin:0}
+.body .btn{display:inline-block;margin-top:18px;padding:12px 24px;border:1px solid var(--black);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--black)}
+.meta{margin-top:18px;font-size:13px;color:var(--ash);display:flex;gap:28px;flex-wrap:wrap}
+@media (max-width:800px){.figs,.doors,.body{grid-template-columns:1fr}.door{aspect-ratio:16/9}}
+
+/* A: Syne + Instrument Serif */
+.a .h{font-family:"Syne";font-weight:800;font-size:clamp(40px,6.4vw,88px);letter-spacing:-.03em}
+.a .h em,.a .figs i,.a .door i{font-family:"Instrument Serif"}
+.a .figs b,.a .door span{font-family:"Syne";font-weight:800;letter-spacing:-.02em}
+.a .body,.a .lead{font-family:"Manrope"}
+.a .body h3{font-family:"Syne";font-weight:800;font-size:22px;margin:0 0 10px;letter-spacing:-.02em}
+/* B: Archivo Black + Bodoni Moda */
+.b .h{font-family:"Archivo Black";font-weight:400;font-size:clamp(38px,6vw,82px);letter-spacing:-.02em}
+.b .h em,.b .figs i,.b .door i{font-family:"Bodoni Moda";font-variation-settings:"opsz" 72;font-size:1.06em}
+.b .figs b,.b .door span{font-family:"Archivo Black"}
+.b .body,.b .lead{font-family:"Archivo";font-weight:300}
+.b .body h3{font-family:"Archivo Black";font-size:20px;margin:0 0 10px}
+/* C: Anton + Italiana */
+.c .h{font-family:"Anton";font-weight:400;font-size:clamp(48px,7.6vw,104px);letter-spacing:.005em;text-transform:uppercase;line-height:.92}
+.c .h em,.c .figs i,.c .door i{font-family:"Italiana";font-style:normal;text-transform:none;font-size:.86em;letter-spacing:.01em}
+.c .figs b,.c .door span{font-family:"Anton";letter-spacing:.01em}
+.c .figs i{font-size:24px}
+.c .body,.c .lead{font-family:"Albert Sans";font-weight:300}
+.c .body h3{font-family:"Anton";font-size:22px;margin:0 0 10px;letter-spacing:.02em;text-transform:uppercase}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="label">Silkstone · type specimen · 16 September 2026</div>
+  <h1 style="margin-top:14px">Three pairings. Stone and silk.</h1>
+  <p>Each option shows the same landing page pieces: the header line, the figures, the three doors and a body block. The heavy face is the stone. The italic is the silk, set in a brass thread colour, the one accent proposed for the site. All fonts are free on Google Fonts. Pick a letter, or say which stone goes with which silk.</p>
+</div></header>
+
+<section class="opt a"><div class="wrap">
+  <div class="opt-head"><div class="name"><b>A</b> Syne Extra Bold with Instrument Serif Italic</div><div class="label">Wide, modern, a little unusual</div></div>
+  <div class="stage">
+    <div class="nav"><span class="brand"><svg viewBox="0 0 104 62"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg>SILKSTONE</span><span>About</span><span>Capabilities</span><span>Products</span><span>Quality</span><span>Contact</span></div>
+    <div class="label">Knitwear manufacturing · Egypt</div>
+    <h2 class="h" style="margin-top:20px">Soft to the hand. <em>Held to a standard.</em></h2>
+    <p class="lead">Cut, sewn, printed and packed under one roof in 10th of Ramadan City.</p>
+    <div class="figs">
+      <div><b>16</b><i>active lines</i><small>33 at full capacity</small></div>
+      <div><b>20,000</b><i>minimum per style</i><small>10,000 for a trial</small></div>
+      <div><b>9</b><i>certificates held</i><small>WRAP, Sedex, ISO, GOTS, GRS</small></div>
+    </div>
+  </div>
+  <div class="doors">
+    <div class="door"><img src="assets/img/fabric-rolls.jpg" alt=""><span>The <i>floor</i></span></div>
+    <div class="door"><img src="assets/img/sweatshirt.jpg" alt=""><span>The <i>wardrobe</i></span></div>
+    <div class="door"><img src="assets/img/carton.jpg" alt=""><span>Every stone <i>in place</i></span></div>
+  </div>
+  <div class="body">
+    <div><h3>Silk is the garment.</h3><p>The product is soft, finished and easy to handle. Made in your weight, your fibre and your fit, to the tech pack you send us.</p></div>
+    <div><h3>Stone is the factory.</h3><p>The operation behind it is fixed, measured and does not move. Every roll, lay, line and carton is recorded against the order.</p><a class="btn">Request a quote</a></div>
+  </div>
+  <div class="meta"><span>Stone: Syne 800</span><span>Silk: Instrument Serif Italic</span><span>Body: Manrope 300</span></div>
+</div></section>
+
+<section class="opt b"><div class="wrap">
+  <div class="opt-head"><div class="name"><b>B</b> Archivo Black with Bodoni Moda Italic</div><div class="label">Heavy grotesk, classic fashion italic</div></div>
+  <div class="stage dark">
+    <div class="nav"><span class="brand"><svg viewBox="0 0 104 62"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg>SILKSTONE</span><span>About</span><span>Capabilities</span><span>Products</span><span>Quality</span><span>Contact</span></div>
+    <div class="label">Knitwear manufacturing · Egypt</div>
+    <h2 class="h" style="margin-top:20px">Soft to the hand. <em>Held to a standard.</em></h2>
+    <p class="lead">Cut, sewn, printed and packed under one roof in 10th of Ramadan City.</p>
+    <div class="figs">
+      <div><b>16</b><i>active lines</i><small>33 at full capacity</small></div>
+      <div><b>20,000</b><i>minimum per style</i><small>10,000 for a trial</small></div>
+      <div><b>9</b><i>certificates held</i><small>WRAP, Sedex, ISO, GOTS, GRS</small></div>
+    </div>
+  </div>
+  <div class="doors">
+    <div class="door"><img src="assets/img/fabric-rolls.jpg" alt=""><span>The <i>floor</i></span></div>
+    <div class="door"><img src="assets/img/sweatshirt.jpg" alt=""><span>The <i>wardrobe</i></span></div>
+    <div class="door"><img src="assets/img/carton.jpg" alt=""><span>Every stone <i>in place</i></span></div>
+  </div>
+  <div class="body">
+    <div><h3>Silk is the garment.</h3><p>The product is soft, finished and easy to handle. Made in your weight, your fibre and your fit, to the tech pack you send us.</p></div>
+    <div><h3>Stone is the factory.</h3><p>The operation behind it is fixed, measured and does not move. Every roll, lay, line and carton is recorded against the order.</p><a class="btn">Request a quote</a></div>
+  </div>
+  <div class="meta"><span>Stone: Archivo Black</span><span>Silk: Bodoni Moda Italic</span><span>Body: Archivo 300</span><span>Shown on the dark ground to test both</span></div>
+</div></section>
+
+<section class="opt c"><div class="wrap">
+  <div class="opt-head"><div class="name"><b>C</b> Anton with Italiana</div><div class="label">Tall condensed capitals, thin flowing display</div></div>
+  <div class="stage">
+    <div class="nav"><span class="brand"><svg viewBox="0 0 104 62"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg>SILKSTONE</span><span>About</span><span>Capabilities</span><span>Products</span><span>Quality</span><span>Contact</span></div>
+    <div class="label">Knitwear manufacturing · Egypt</div>
+    <h2 class="h" style="margin-top:20px">Soft to the hand. <em>Held to a standard.</em></h2>
+    <p class="lead">Cut, sewn, printed and packed under one roof in 10th of Ramadan City.</p>
+    <div class="figs">
+      <div><b>16</b><i>active lines</i><small>33 at full capacity</small></div>
+      <div><b>20,000</b><i>minimum per style</i><small>10,000 for a trial</small></div>
+      <div><b>9</b><i>certificates held</i><small>WRAP, Sedex, ISO, GOTS, GRS</small></div>
+    </div>
+  </div>
+  <div class="doors">
+    <div class="door"><img src="assets/img/fabric-rolls.jpg" alt=""><span>The <i>floor</i></span></div>
+    <div class="door"><img src="assets/img/sweatshirt.jpg" alt=""><span>The <i>wardrobe</i></span></div>
+    <div class="door"><img src="assets/img/carton.jpg" alt=""><span>Every stone <i>in place</i></span></div>
+  </div>
+  <div class="body">
+    <div><h3>Silk is the garment.</h3><p>The product is soft, finished and easy to handle. Made in your weight, your fibre and your fit, to the tech pack you send us.</p></div>
+    <div><h3>Stone is the factory.</h3><p>The operation behind it is fixed, measured and does not move. Every roll, lay, line and carton is recorded against the order.</p><a class="btn">Request a quote</a></div>
+  </div>
+  <div class="meta"><span>Stone: Anton</span><span>Silk: Italiana</span><span>Body: Albert Sans 300</span></div>
+</div></section>
+
+<footer style="padding:40px 0 64px"><div class="wrap"><p class="label">Reply with A, B or C, or mix: a stone from one and a silk from another.</p></div></footer>
+</body>
+</html>
