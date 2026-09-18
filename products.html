@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@300;400;500&family=Bodoni+Moda:ital,opsz,wght@1,6..96,400;1,6..96,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=13">
+<link rel="stylesheet" href="assets/styles.css?v=14">
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
 </head>
@@ -39,7 +39,7 @@
     <button data-key="custom" role="tab">Your style</button>
   </div>
 
-  <div id="rail3d" class="rail-stage" data-slots='[{"key":"tshirt","label":"T-shirts","model":"assets/models/tshirt.glb","height":0.72},{"key":"sweatshirt","label":"Sweatshirts"},{"key":"hoodie","label":"Hoodies","model":"assets/models/hoodie.glb","height":0.76},{"key":"pants","label":"Pants"},{"key":"custom","label":"Your style"}]'>
+  <div id="rail3d" class="rail-stage" data-slots='[{"key":"tshirt","label":"T-shirts","model":"assets/models/tshirt.glb","height":0.72},{"key":"sweatshirt","label":"Sweatshirts"},{"key":"hoodie","label":"Hoodies","model":"assets/models/hoodie.glb","height":0.76,"plain":"#1c1b19"},{"key":"pants","label":"Pants"},{"key":"custom","label":"Your style"}]'>
     <canvas tabindex="0" aria-label="Clothes rail with Silkstone garments. Drag to move along the rail, click a garment to open it, arrow keys to step between garments."></canvas>
     <div class="rail-labels" aria-hidden="true"></div>
     <p class="rail-hint">Drag the rail, or choose a garment</p>
@@ -172,7 +172,7 @@
 </div></footer>
 
 <script src="assets/site.js?v=6"></script>
-<script type="module" src="assets/rail.js?v=7"></script>
+<script type="module" src="assets/rail.js?v=15"></script>
 <script>
 (function(){
   var host=document.getElementById('rail3d'), panel=document.getElementById('itemPanel');
