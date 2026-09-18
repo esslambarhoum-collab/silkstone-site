@@ -458,3 +458,41 @@ button,a,[role="button"]{touch-action:manipulation}
 .plan-note h3{font-size:22px;margin-bottom:12px}
 .plan-note p{color:var(--graphite)}
 @media (max-width:900px){.plan-wrap{grid-template-columns:1fr}.plan text{font-size:20px}.plan text.sub{font-size:13px}}
+
+/* ---------- quality ---------- */
+.needle-rail{position:fixed;left:clamp(10px,2vw,28px);top:0;bottom:0;width:24px;pointer-events:none;z-index:5;display:none}
+@media (min-width:1100px){.needle-rail{display:block}}
+.needle-thread{position:absolute;left:0;top:0;width:24px;height:100%}
+.needle-thread path{fill:none;stroke:var(--black);stroke-width:1;stroke-dasharray:3 4;opacity:.45}
+.needle{position:absolute;left:0;top:0;width:24px;height:60px;transform:translateY(-60px)}
+.needle path{fill:none;stroke:var(--black);stroke-width:1.6;stroke-linecap:round}
+.qwrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,80px);align-items:center}
+.qgarment{position:relative;padding:0;display:block}
+.qgarment figure{margin:0;color:var(--black)}
+.qgarment figure svg{width:100%;max-width:460px;height:auto;display:block;margin:0 auto}
+.qspot{position:absolute;width:44px;height:44px;margin:-22px 0 0 -22px;background:none;border:0;padding:0;display:grid;place-items:center;cursor:pointer}
+.qspot i{width:12px;height:12px;border-radius:50%;background:var(--bone);border:1px solid var(--black);transition:background .4s var(--ease),transform .4s var(--ease);position:relative}
+.qspot i::after{content:"";position:absolute;inset:-9px;border-radius:50%;border:1px solid var(--black);opacity:.35;animation:pulse 2.6s ease-out infinite}
+.qspot.on i{background:var(--black);transform:scale(1.15)}
+.qspot.on i::after{animation:none;opacity:0}
+@keyframes pulse{0%{transform:scale(.6);opacity:.5}100%{transform:scale(1.6);opacity:0}}
+.qnotes{position:relative}
+.qnote{display:none}
+.qnote.on{display:block}
+.qwhen{display:block;font-family:var(--silk);font-style:italic;font-size:22px;color:var(--graphite);margin-bottom:10px}
+.qnote h2{font-size:clamp(28px,3.2vw,44px)}
+.qnote p{margin-top:18px;color:var(--graphite);max-width:46ch}
+.qtabs{display:flex;gap:26px;margin-top:28px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ash)}
+.qtabs button{background:none;border:0;padding:8px 0;color:inherit;font:inherit;letter-spacing:inherit;text-transform:inherit;border-bottom:1px solid transparent;min-height:44px}
+.qtabs button.on,.qtabs button:hover{color:var(--black);border-color:var(--black)}
+@media (max-width:820px){.qwrap{grid-template-columns:1fr}}
+.frames{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,48px);margin-top:48px}
+.frame{background:var(--white);border:1px solid var(--black);padding:10px;box-shadow:0 18px 40px rgba(21,21,19,.10),0 2px 4px rgba(21,21,19,.06);text-align:center;transition:transform .8s var(--ease),box-shadow .8s var(--ease)}
+.frame:hover{transform:translateY(-3px);box-shadow:0 26px 50px rgba(21,21,19,.14),0 2px 4px rgba(21,21,19,.06)}
+.frame .mat{border:1px solid var(--line);padding:26px;display:grid;place-items:center;aspect-ratio:4/3;background:var(--white)}
+.frame .mat img{max-height:76px;max-width:70%;filter:grayscale(1);opacity:.85}
+.frame b{display:block;font-family:var(--stone);font-weight:400;font-size:15px;margin:16px 0 4px}
+.frame span{display:block;font-size:13px;color:var(--graphite);padding:0 10px}
+.frame small{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash);margin:10px 0 6px}
+@media (max-width:900px){.frames{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.frames{grid-template-columns:1fr}}

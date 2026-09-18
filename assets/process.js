@@ -67,6 +67,20 @@
     setTimeout(build, 500);
   }
 
+  /* needle in the margin: travels with scroll, thread drawn behind it */
+  var nr = document.querySelector('.needle-rail');
+  if (nr && !reduce) {
+    var needle = nr.querySelector('.needle'), thr = nr.querySelector('.needle-thread path');
+    thr.style.strokeDasharray = '3 4'; 
+    var mask = nr.querySelector('.needle-thread');
+    function moveNeedle() {
+      var max = document.documentElement.scrollHeight - innerHeight; var p = max > 0 ? scrollY / max : 0;
+      var y = p * (innerHeight - 80) + 10; needle.style.transform = 'translateY(' + y.toFixed(1) + 'px)';
+      mask.style.clipPath = 'inset(0 0 ' + (100 - p * 100).toFixed(2) + '% 0)';
+    }
+    addEventListener('scroll', function () { requestAnimationFrame(moveNeedle); }, { passive: true }); moveNeedle();
+  }
+
   /* floor plan: hover or focus a department to highlight and describe */
   var plan = document.querySelector('.plan');
   if (plan) {

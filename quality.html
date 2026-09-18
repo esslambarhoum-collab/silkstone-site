@@ -10,10 +10,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@300;400;500&family=Bodoni+Moda:ital,opsz,wght@1,6..96,400;1,6..96,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=4">
+<link rel="stylesheet" href="assets/styles.css?v=10">
 </head>
 <body>
-<div class="loader" aria-hidden="true"><svg viewBox="0 0 104 62"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg></div>
 <a class="skip" href="#main">Skip to content</a>
 <header class="nav"><div class="wrap">
   <a class="brand" href="index.html" aria-label="Silkstone home"><svg viewBox="0 0 104 62" aria-hidden="true"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg>SILKSTONE</a>
@@ -23,67 +22,90 @@
 </div></header>
 <div class="menu"><a href="index.html">Home</a><a href="about.html">About</a><a href="capabilities.html">Capabilities</a><a href="products.html">Products</a><a href="quality.html">Quality</a><a href="traced-order.html">Every stone in place</a><a href="egypt.html">Egypt</a><a href="techpack.html">Tech pack generator</a><a href="contact.html">Contact</a></div>
 
+<div class="needle-rail" aria-hidden="true"><svg viewBox="0 0 24 1000" preserveAspectRatio="none" class="needle-thread"><path d="M12 0 V1000"/></svg><svg viewBox="0 0 24 60" class="needle"><path d="M12 2 v52"/><path d="M12 8 a2.4 2.4 0 1 0 0.01 0"/></svg></div>
+
 <main id="main">
-<section class="pagehead"><div class="wrap">
-  <span class="label">Quality and compliance</span>
-  <h1>Checked three times.<br>Certified nine ways.</h1>
-  <p class="lead">Quality at Silkstone is a digitally managed system with a zero defects policy, audited to the standards our buyers ask for. If a buyer needs a certificate we do not hold, we obtain it.</p>
+<section class="pagehead short"><div class="wrap">
+  <h1>Checked three times. <em>Certified nine ways.</em></h1>
+  <p class="lead">Quality is a digitally managed system with a zero defects policy, audited to the standards our buyers ask for. Touch the garment to see where each check happens.</p>
 </div></section>
 
-<section class="tight"><div class="wrap">
-  <div class="rows rv">
-    <div class="row"><div class="k">Before cutting</div><div class="v"><b>Fabric inspection and testing.</b><p class="muted" style="margin-top:6px">Every incoming roll passes through the fabric inspection machine. Defects, shade and weight are recorded against the roll number. A fault found here costs a roll. Found later, it costs an order.</p></div></div>
-    <div class="row"><div class="k">During sewing</div><div class="v"><b>In-line inspection.</b><p class="muted" style="margin-top:6px">Checks run inside each line while the garment is being built, recorded digitally by operation, so a fault is caught at the operation causing it and not at the end of the run.</p></div></div>
-    <div class="row"><div class="k">After packing</div><div class="v"><b>Final random inspection and metal detection.</b><p class="muted" style="margin-top:6px">Finished garments are inspected to the buyer's AQL, then pass a calibrated metal detector inside a secured inspection zone before the carton is sealed.</p></div></div>
+<section class="tight" style="padding-top:0"><div class="wrap">
+  <div class="qwrap">
+    <div class="qgarment pstage">
+      <figure aria-hidden="true"><i class="anchor"></i>
+        <svg viewBox="0 0 320 360"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M112 40 L40 76 L60 150 L98 138 L98 330 L222 330 L222 138 L260 150 L280 76 L208 40 Q184 76 160 76 Q136 76 112 40 Z"/>
+          <path d="M126 40 Q160 66 194 40"/><path d="M104 300 h112"/><path d="M60 150 l38 -12 M260 150 l-38 -12"/>
+          <path d="M130 62 h60 v14 h-60 z"/></g></svg>
+      </figure>
+      <button class="qspot" data-q="before" style="left:45%;top:24%" aria-label="Before cutting: fabric inspection"><i></i></button>
+      <button class="qspot" data-q="during" style="left:31%;top:58%" aria-label="During sewing: in-line inspection"><i></i></button>
+      <button class="qspot" data-q="after" style="left:66%;top:86%" aria-label="After packing: final inspection and metal detection"><i></i></button>
+    </div>
+    <div class="qnotes">
+      <div class="qnote on" data-q="before"><span class="qwhen">Before cutting</span><h2>Fabric <em>inspection.</em></h2><p>Every incoming roll passes through the fabric inspection machine. Defects, shade and weight are recorded against the roll number and the mill lot. A fault found here costs a roll. Found later, it costs an order.</p></div>
+      <div class="qnote" data-q="during"><span class="qwhen">During sewing</span><h2>In-line <em>inspection.</em></h2><p>Checks run inside each line while the garment is built, recorded by operation with the inspector's name and the corrective action. A fault is caught at the operation causing it, not at the end of the run.</p></div>
+      <div class="qnote" data-q="after"><span class="qwhen">After packing</span><h2>Final inspection and <em>metal detection.</em></h2><p>Finished garments are inspected to the buyer's AQL, then every piece passes a calibrated metal detector inside a secured zone before the carton is sealed and scanned.</p></div>
+      <div class="qtabs" role="tablist"><button class="on" data-q="before" role="tab">Before</button><button data-q="during" role="tab">During</button><button data-q="after" role="tab">After</button></div>
+    </div>
   </div>
 </div></section>
 
 <section class="rule white"><div class="wrap">
-  <div class="rv"><span class="label">Certificates and audits</span><h2 style="margin-top:22px">What we hold.</h2><p class="muted" style="margin-top:22px;max-width:60ch">Certificate numbers and copies are available to buyers on request. Logos are shown as issued by each scheme.</p></div>
-  <div class="rows" style="margin-top:48px">
-    <div class="row rv"><div class="k"><img src="assets/logos/wrap.webp" alt="WRAP" style="width:90px;filter:grayscale(1)"></div><div class="v"><b>WRAP</b><p class="muted" style="margin-top:4px">Worldwide Responsible Accredited Production. Facility certification for lawful, humane and ethical manufacturing.</p></div></div>
-    <div class="row rv"><div class="k"><img src="assets/logos/sedex.webp" alt="Sedex" style="width:90px;filter:grayscale(1)"></div><div class="v"><b>Sedex, SMETA audit</b><p class="muted" style="margin-top:4px">Sedex membership with a SMETA social audit covering labour standards, health and safety, environment and business ethics.</p></div></div>
-    <div class="row rv"><div class="k"><img src="assets/logos/iso9001.webp" alt="ISO 9001" style="width:70px;filter:grayscale(1)"></div><div class="v"><b>ISO 9001</b><p class="muted" style="margin-top:4px">Quality management system.</p></div></div>
-    <div class="row rv"><div class="k"><img src="assets/logos/iso14001.jpg" alt="ISO 14001" style="width:70px;filter:grayscale(1)"></div><div class="v"><b>ISO 14001</b><p class="muted" style="margin-top:4px">Environmental management system.</p></div></div>
-    <div class="row rv"><div class="k"><img src="assets/logos/iso45001.jpg" alt="ISO 45001" style="width:70px;filter:grayscale(1)"></div><div class="v"><b>ISO 45001</b><p class="muted" style="margin-top:4px">Occupational health and safety management system.</p></div></div>
-    <div class="row rv"><div class="k"><img src="assets/logos/gots.jpg" alt="GOTS" style="width:70px;filter:grayscale(1)"></div><div class="v"><b>GOTS</b><p class="muted" style="margin-top:4px">Global Organic Textile Standard. Organic fibre with processing, social and chemical criteria. Licence number shown on request.</p></div></div>
-    <div class="row rv"><div class="k"><img src="assets/logos/ocs.png" alt="OCS" style="width:64px;filter:grayscale(1)"></div><div class="v"><b>OCS</b><p class="muted" style="margin-top:4px">Organic Content Standard. Chain of custody for organic fibre content, with transaction certificates per shipment.</p></div></div>
-    <div class="row rv"><div class="k"><img src="assets/logos/rcs.webp" alt="RCS" style="width:64px;filter:grayscale(1)"></div><div class="v"><b>RCS</b><p class="muted" style="margin-top:4px">Recycled Claim Standard. Chain of custody for recycled content.</p></div></div>
-    <div class="row rv"><div class="k"><img src="assets/logos/grs.png" alt="GRS" style="width:90px;filter:grayscale(1)"></div><div class="v"><b>GRS</b><p class="muted" style="margin-top:4px">Global Recycled Standard. Recycled content with social, environmental and chemical requirements.</p></div></div>
+  <h2>The wall of <em>certificates.</em></h2>
+  <p class="lead" style="margin-top:18px">As they hang in the factory office. Certificate numbers and copies go to buyers on request.</p>
+  <div class="frames">
+    <div class="frame rv"><div class="mat"><img src="assets/logos/wrap.webp" alt="WRAP"></div><b>WRAP</b><span>Worldwide Responsible Accredited Production</span><small>Number on request</small></div>
+    <div class="frame rv"><div class="mat"><img src="assets/logos/sedex.webp" alt="Sedex"></div><b>Sedex, SMETA</b><span>Social audit: labour, health and safety, environment, ethics</span><small>Member ID on request</small></div>
+    <div class="frame rv"><div class="mat"><img src="assets/logos/iso9001.webp" alt="ISO 9001"></div><b>ISO 9001</b><span>Quality management</span><small>Certificate on request</small></div>
+    <div class="frame rv"><div class="mat"><img src="assets/logos/iso14001.jpg" alt="ISO 14001"></div><b>ISO 14001</b><span>Environmental management</span><small>Certificate on request</small></div>
+    <div class="frame rv"><div class="mat"><img src="assets/logos/iso45001.jpg" alt="ISO 45001"></div><b>ISO 45001</b><span>Occupational health and safety</span><small>Certificate on request</small></div>
+    <div class="frame rv"><div class="mat"><img src="assets/logos/gots.jpg" alt="GOTS"></div><b>GOTS</b><span>Global Organic Textile Standard</span><small>Licence number on request</small></div>
+    <div class="frame rv"><div class="mat"><img src="assets/logos/ocs.png" alt="OCS"></div><b>OCS</b><span>Organic Content Standard</span><small>Scope certificate on request</small></div>
+    <div class="frame rv"><div class="mat"><img src="assets/logos/rcs.webp" alt="RCS"></div><b>RCS</b><span>Recycled Claim Standard</span><small>Scope certificate on request</small></div>
+    <div class="frame rv"><div class="mat"><img src="assets/logos/grs.png" alt="GRS"></div><b>GRS</b><span>Global Recycled Standard</span><small>Scope certificate on request</small></div>
   </div>
-  <p class="small" style="margin-top:22px">Buyers with their own audit programmes, including Higg FEM, Better Cotton and brand-specific codes of conduct, are supported. Ask and we will arrange it.</p>
+  <p class="small" style="margin-top:22px">Buyers with their own programmes, including Higg FEM, Better Cotton and brand codes of conduct, are supported. Anything not on the wall, we arrange.</p>
 </div></section>
 
 <section class="rule"><div class="wrap two">
   <div class="rv stack">
-    <span class="label">Product safety</span>
-    <h2>Needles, metal, and pull tests.</h2>
-    <ul class="dash">
-      <li><b>Broken needle policy.</b> Every broken needle is logged, all fragments recovered and matched before a replacement is issued.</li>
-      <li><b>Metal detection.</b> A calibrated detector inside a secured zone, every garment, before final packing.</li>
-      <li><b>Pull testing.</b> Buttons, snaps and drawcord tips tested for durability and child safety per batch.</li>
-      <li><b>Chemicals.</b> No hazardous chemicals in stain removal or processing. Restricted substance lists followed per buyer.</li>
-      <li><b>Fire and safety.</b> Emergency exits on every floor, smart fire alarms, extinguishers placed to plan.</li>
-    </ul>
+    <h2>Needles, metal, <em>and pull tests.</em></h2>
+    <p class="muted">Every broken needle is logged and every fragment recovered and matched before a replacement is issued. A calibrated metal detector checks every garment inside a secured zone before packing. Buttons, snaps and drawcord tips are pull-tested per batch for durability and child safety. No hazardous chemicals are used in stain removal or processing, and restricted substance lists are followed per buyer.</p>
   </div>
   <div class="rv stack">
-    <span class="label">Records</span>
-    <h2>Everything is written down.</h2>
-    <p class="muted">Inline and final inspection results are recorded in the ERP against the order, line and operation. Buyers can see quality reports as they are produced, and every carton can be traced back to its rolls.</p>
+    <h2>Everything is <em>written down.</em></h2>
+    <p class="muted">Inline and final inspection results are recorded in the ERP against the order, line and operation. Buyers see quality reports as they are produced, and every carton traces back to its rolls.</p>
     <a class="link" href="traced-order.html">Follow a sample order</a>
   </div>
+</div></section>
+
+<section class="rule tight"><div class="wrap two">
+  <div class="blank wide rv"><span>Photograph to follow<br>Certificates on the office wall</span></div>
+  <div class="blank wide rv"><span>Photograph to follow<br>Metal detector at packing</span></div>
 </div></section>
 </main>
 
 <footer><div class="wrap">
   <div class="cols">
-    <div><div class="brand"><svg viewBox="0 0 104 62" aria-hidden="true"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg>SILKSTONE</div><p class="small" style="margin-top:16px">Knitwear manufacturing, 10th of Ramadan City, Egypt.<br>A Boldbridge Capital and Aletex Group partnership.</p></div>
+    <div><div class="brand"><svg viewBox="0 0 104 62" aria-hidden="true"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg>SILKSTONE</div><p class="small" style="margin-top:16px">Knitwear manufacturing, Egypt.<br>A Boldbridge Capital and Aletex Group partnership.</p></div>
     <div><h4>Company</h4><a href="about.html">About</a><a href="capabilities.html">Capabilities</a><a href="quality.html">Quality</a><a href="traced-order.html">Every stone in place</a><a href="egypt.html">Egypt</a></div>
     <div><h4>Work with us</h4><a href="products.html">Products</a><a href="techpack.html">Tech pack generator</a><a href="contact.html">Request a quote</a><a href="contact.html">Company profile, on request</a><a href="contact.html">Product catalogue, on request</a></div>
     <div><h4>Contact</h4><a href="mailto:info@silkstone-textile.com">info@silkstone-textile.com</a><a href="contact.html">Plot 236, 6 Million Area, Southern Industrial Zone, 10th of Ramadan City, Egypt</a><a href="https://www.linkedin.com/company/silkstone-fashion/" target="_blank" rel="noopener">LinkedIn</a></div>
   </div>
-  <div class="bottom"><span>© 2026 Silkstone Fashion</span><span>Photographs of the factory to follow.</span></div>
+  <div class="bottom"><span>© 2026 Silkstone Fashion</span><span><a href="legal.html#privacy">Privacy</a> · <a href="legal.html#terms">Terms</a> · <a href="legal.html#cookies">Cookies</a></span></div>
 </div></footer>
-<script src="assets/site.js?v=4"></script>
+<script src="assets/site.js?v=10"></script>
+<script src="assets/process.js?v=10"></script>
+<script>
+(function(){
+  var spots=document.querySelectorAll('.qspot'), tabs=document.querySelectorAll('.qtabs button'), notes=document.querySelectorAll('.qnote');
+  function on(q){ spots.forEach(function(s){ s.classList.toggle('on', s.dataset.q===q); }); tabs.forEach(function(t){ t.classList.toggle('on', t.dataset.q===q); t.setAttribute('aria-selected', t.dataset.q===q?'true':'false'); }); notes.forEach(function(n){ n.classList.toggle('on', n.dataset.q===q); }); }
+  spots.forEach(function(s){ s.addEventListener('click', function(){ on(s.dataset.q); }); s.addEventListener('mouseenter', function(){ on(s.dataset.q); }); });
+  tabs.forEach(function(t){ t.addEventListener('click', function(){ on(t.dataset.q); }); });
+  on('before');
+})();
+</script>
 </body>
 </html>
