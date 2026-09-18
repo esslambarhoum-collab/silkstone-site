@@ -534,3 +534,27 @@ button,a,[role="button"]{touch-action:manipulation}
 .leader h3{font-size:28px;margin-bottom:6px}
 .blank.portrait{aspect-ratio:4/5}
 @media (max-width:900px){.about-hero,.partners,.leader{grid-template-columns:1fr}.facts{grid-template-columns:1fr}}
+
+/* ---------- contact ---------- */
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(32px,6vw,96px);align-items:start}
+.convo{max-width:none;background:var(--white);border:1px solid var(--line);padding:clamp(28px,5vw,64px)}
+.convo .progress{margin-bottom:40px}
+.qstep{display:block;font-family:var(--silk);font-style:italic;font-size:18px;color:var(--graphite);margin-bottom:14px}
+.contact-side .facts{grid-template-columns:1fr;margin-top:28px}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+
+/* ---------- tech pack tabs ---------- */
+.tp-tabs{display:flex;flex-wrap:wrap;gap:6px 22px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash);margin-bottom:8px}
+.tp-tabs button{background:none;border:0;padding:8px 0;color:inherit;font:inherit;letter-spacing:inherit;text-transform:inherit;border-bottom:1px solid transparent;min-height:44px}
+.tp-tabs button.on,.tp-tabs button:hover{color:var(--black);border-color:var(--black)}
+.tp-form .group{display:none;border-top:0;padding:18px 0 8px}
+.tp-form .group.on{display:block}
+.tp-nav{display:flex;align-items:center;gap:24px;margin-top:22px;padding-top:22px;border-top:1px solid var(--line)}
+.tp-nav .back{background:none;border:0;padding:0;font:inherit;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash)}
+.tp-nav .back:disabled{opacity:.35;cursor:default}
+.tp-sheet{max-height:calc(100vh - 130px);overflow:auto}
+.order-head{border:0;padding:0;gap:28px}
+.order-head .v{font-family:var(--stone);font-size:20px}
+.dept-nav{border-top:0}
+.dept-nav button{border-bottom:0;padding:10px 0}
+.dept-nav button.on{color:var(--black);font-weight:500}

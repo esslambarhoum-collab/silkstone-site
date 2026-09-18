@@ -10,10 +10,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@300;400;500&family=Bodoni+Moda:ital,opsz,wght@1,6..96,400;1,6..96,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=4">
+<link rel="stylesheet" href="assets/styles.css?v=13">
 </head>
 <body>
-<div class="loader" aria-hidden="true"><svg viewBox="0 0 104 62"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg></div>
 <a class="skip" href="#main">Skip to content</a>
 <header class="nav"><div class="wrap">
   <a class="brand" href="index.html" aria-label="Silkstone home"><svg viewBox="0 0 104 62" aria-hidden="true"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg>SILKSTONE</a>
@@ -24,15 +23,15 @@
 <div class="menu"><a href="index.html">Home</a><a href="about.html">About</a><a href="capabilities.html">Capabilities</a><a href="products.html">Products</a><a href="quality.html">Quality</a><a href="traced-order.html">Every stone in place</a><a href="egypt.html">Egypt</a><a href="techpack.html">Tech pack generator</a><a href="contact.html">Contact</a></div>
 
 <main id="main">
-<section class="pagehead"><div class="wrap">
-  <span class="label">Tech pack generator</span>
-  <h1>Build a tech pack.<br>Free, in ten minutes.</h1>
-  <p class="lead">A tech pack is the document a factory quotes from: fabric, construction, measurements, trims, decoration and packing. Fill in what you know. The sheet on the right updates as you type. Print it, save it as a PDF, or send it straight to us for a quote.</p>
+<section class="pagehead short"><div class="wrap">
+  <h1>Build a <em>tech pack.</em></h1>
+  <p class="lead">The document a factory quotes from, in the order a factory reads it: style, fabric, construction, measurements, trims, decoration, packing. Move through the tabs. The sheet updates as you type. Print it, save it as a PDF, or send it to us for a quote.</p>
 </div></section>
 
-<section class="tight"><div class="wrap tp">
+<section class="tight" style="padding-top:0"><div class="wrap tp">
   <form class="tp-form" id="tpForm" autocomplete="off">
-    <div class="group">
+    <div class="tp-tabs" role="tablist"></div>
+    <div class="group" data-tab="0">
       <h3>Style</h3>
       <div class="grid2">
         <div><label for="garment">Garment</label><select id="garment" name="garment"><option value="tshirt">T-shirt</option><option value="longsleeve">Long sleeve T-shirt</option><option value="polo">Polo shirt</option><option value="sweatshirt">Sweatshirt</option><option value="hoodie">Hoodie</option><option value="other">Other knitwear</option></select></div>
@@ -45,7 +44,7 @@
       </div>
     </div>
 
-    <div class="group">
+    <div class="group" data-tab="1">
       <h3>Fabric</h3>
       <div class="grid2">
         <div><label for="fabric">Fabric</label><select id="fabric" name="fabric"><option>Single jersey</option><option>Interlock</option><option>Rib</option><option>Pique</option><option>Loopback fleece</option><option>Brushed fleece</option><option>Other</option></select></div>
@@ -57,7 +56,7 @@
       </div>
     </div>
 
-    <div class="group">
+    <div class="group" data-tab="2">
       <h3>Construction</h3>
       <div class="grid2">
         <div><label for="neck">Neck</label><select id="neck" name="neck"><option>Crew, 1x1 rib</option><option>Crew, 2x2 rib</option><option>V-neck, rib</option><option>Hood, two piece</option><option>Polo collar</option><option>Other</option></select></div>
@@ -68,7 +67,7 @@
       <label for="construction">Construction notes</label><textarea id="construction" name="construction" rows="3" placeholder="Pocket, drawcord, side splits, back neck tape, anything specific"></textarea>
     </div>
 
-    <div class="group">
+    <div class="group" data-tab="3">
       <h3>Sizes and measurements</h3>
       <label>Size range</label>
       <div class="sizes" id="sizes">
@@ -79,7 +78,7 @@
       <div class="grid2"><div><label for="tolerance">Tolerance</label><input id="tolerance" name="tolerance" value="± 1 cm on widths, ± 1.5 cm on lengths"></div></div>
     </div>
 
-    <div class="group">
+    <div class="group" data-tab="4">
       <h3>Trims and labels</h3>
       <div class="grid2">
         <div><label for="neckLabel">Neck label</label><select id="neckLabel" name="neckLabel"><option>Woven label</option><option>Printed label</option><option>Heat transfer, tagless</option><option>None</option></select></div>
@@ -89,7 +88,7 @@
       </div>
     </div>
 
-    <div class="group">
+    <div class="group" data-tab="5">
       <h3>Print and embroidery</h3>
       <div class="grid2">
         <div><label for="decoMethod">Method</label><select id="decoMethod" name="decoMethod"><option>None</option><option>Screen print</option><option>Rotary print</option><option>Heat transfer</option><option>Embroidery</option><option>Print and embroidery</option></select></div>
@@ -98,7 +97,7 @@
       <label for="artwork">Artwork notes</label><textarea id="artwork" name="artwork" rows="2" placeholder="Colours, Pantone references, file formats you will send"></textarea>
     </div>
 
-    <div class="group">
+    <div class="group" data-tab="6">
       <h3>Packing and quantity</h3>
       <div class="grid2">
         <div><label for="packing">Packing</label><select id="packing" name="packing"><option>Folded, poly bag, size sticker</option><option>Folded, no bag, size sticker</option><option>Hanger packed</option><option>Buyer's instruction</option></select></div>
@@ -111,13 +110,14 @@
       <label for="notes">Notes</label><textarea id="notes" name="notes" rows="3" placeholder="Anything else the factory should know"></textarea>
     </div>
 
-    <div class="group">
+    <div class="group" data-tab="7">
       <h3>Your details, for the quote</h3>
       <div class="grid2">
         <div><label for="contactName">Name</label><input id="contactName" name="contactName"></div>
         <div><label for="contactEmail">Email</label><input id="contactEmail" name="contactEmail" type="email"></div>
       </div>
     </div>
+      <div class="tp-nav"><button type="button" class="back" data-prev>Back</button><button type="button" class="btn" data-next>Next</button></div>
   </form>
 
   <div>
@@ -164,7 +164,7 @@
   </div>
   <div class="bottom"><span>© 2026 Silkstone Fashion</span><span>Photographs of the factory to follow.</span></div>
 </div></footer>
-<script src="assets/site.js?v=4"></script>
+<script src="assets/site.js?v=13"></script>
 <script>
 (function(){
   var SIZES=['XS','S','M','L','XL','XXL','3XL'];
@@ -249,6 +249,13 @@
   else { try{ var list=JSON.parse(localStorage.getItem('silkstone_tp')||'[]'); if(list.length&&POM[list[list.length-1]]) $('garment').value=list[list.length-1]; }catch(e){} }
   var g=$('garment').value; if(g==='sweatshirt'||g==='hoodie'){ $('fabric').value='Brushed fleece'; $('hem').value='Rib hem and cuffs'; $('neck').value=g==='hoodie'?'Hood, two piece':'Crew, 1x1 rib'; $('finish').value='Brushed inside'; }
   buildMeasForm(); render();
+  /* tabs */
+  var NAMES_T=["Style","Fabric","Construction","Measurements","Trims","Decoration","Packing","Contact"]; var groups=[].slice.call(form.querySelectorAll(".group")); var tabsBox=form.querySelector(".tp-tabs"); var cur=0;
+  groups.forEach(function(g,i){ var b=document.createElement("button"); b.type="button"; b.setAttribute("role","tab"); b.textContent=NAMES_T[i]||("Step "+(i+1)); b.addEventListener("click",function(){ goTab(i); }); tabsBox.appendChild(b); });
+  function goTab(i){ cur=Math.max(0,Math.min(groups.length-1,i)); groups.forEach(function(g,k){ g.classList.toggle("on",k===cur); }); tabsBox.querySelectorAll("button").forEach(function(b,k){ b.classList.toggle("on",k===cur); b.setAttribute("aria-selected",k===cur?"true":"false"); }); form.querySelector("[data-prev]").disabled=cur===0; form.querySelector("[data-next]").textContent=cur===groups.length-1?"Done":"Next"; }
+  form.querySelector("[data-next]").addEventListener("click",function(){ if(cur===groups.length-1){ document.getElementById("sheet").scrollIntoView({behavior:"smooth",block:"start"}); } else goTab(cur+1); });
+  form.querySelector("[data-prev]").addEventListener("click",function(){ goTab(cur-1); });
+  goTab(0);
 })();
 </script>
 </body>

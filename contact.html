@@ -10,10 +10,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@300;400;500&family=Bodoni+Moda:ital,opsz,wght@1,6..96,400;1,6..96,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=4">
+<link rel="stylesheet" href="assets/styles.css?v=13">
 </head>
 <body>
-<div class="loader" aria-hidden="true"><svg viewBox="0 0 104 62"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg></div>
 <a class="skip" href="#main">Skip to content</a>
 <header class="nav"><div class="wrap">
   <a class="brand" href="index.html" aria-label="Silkstone home"><svg viewBox="0 0 104 62" aria-hidden="true"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg>SILKSTONE</a>
@@ -24,31 +23,30 @@
 <div class="menu"><a href="index.html">Home</a><a href="about.html">About</a><a href="capabilities.html">Capabilities</a><a href="products.html">Products</a><a href="quality.html">Quality</a><a href="traced-order.html">Every stone in place</a><a href="egypt.html">Egypt</a><a href="techpack.html">Tech pack generator</a><a href="contact.html">Contact</a></div>
 
 <main id="main">
-<section class="pagehead"><div class="wrap">
-  <span class="label">Contact</span>
-  <h1>One question<br>at a time.</h1>
+<section class="pagehead short"><div class="wrap">
+  <h1>One question <em>at a time.</em></h1>
   <p class="lead">Nine short questions and we have what we need to come back with real pricing and lead times. Or write to us directly.</p>
 </div></section>
 
-<section class="tight"><div class="wrap">
-  <div class="two">
+<section class="tight" style="padding-top:0"><div class="wrap">
+  <div class="contact-grid">
     <div class="convo">
       <div class="progress"><i style="width:0"></i></div>
 
       <div class="q on" data-q="need">
-        <span class="label">1 of 9</span>
+        <span class="qstep">1 of 9</span>
         <h2>What do you need?</h2>
         <div class="choices"><button data-v="A production quote">A quote</button><button data-v="A sample">A sample</button><button data-v="A question">A question</button><button data-v="A factory visit">A factory visit</button></div>
       </div>
 
       <div class="q" data-q="garment">
-        <span class="label">2 of 9</span>
+        <span class="qstep">2 of 9</span>
         <h2>Which garment?</h2>
         <div class="choices"><button>T-shirts</button><button>Sweatshirts</button><button>Hoodies</button><button>Other knitwear</button><button data-v="Not a garment enquiry">Not a garment enquiry</button></div>
       </div>
 
       <div class="q" data-q="quantity">
-        <span class="label">3 of 9</span>
+        <span class="qstep">3 of 9</span>
         <h2>Roughly how many pieces?</h2>
         <input class="field" type="text" inputmode="numeric" placeholder="Per style, per season" autocomplete="off">
         <p class="small" style="margin-top:14px">Minimum 20,000 per style. Trial orders from 10,000.</p>
@@ -56,66 +54,66 @@
       </div>
 
       <div class="q" data-q="timeline">
-        <span class="label">4 of 9</span>
+        <span class="qstep">4 of 9</span>
         <h2>When do you need it?</h2>
         <input class="field" type="text" placeholder="A month, a season, or a date" autocomplete="off">
         <div class="q-actions"><button class="btn" data-next>Next</button><button class="back" data-back>Back</button></div>
       </div>
 
       <div class="q" data-q="name">
-        <span class="label">5 of 9</span>
+        <span class="qstep">5 of 9</span>
         <h2>Your name?</h2>
         <input class="field" type="text" placeholder="Name" autocomplete="name" required>
         <div class="q-actions"><button class="btn" data-next>Next</button><button class="back" data-back>Back</button></div>
       </div>
 
       <div class="q" data-q="company">
-        <span class="label">6 of 9</span>
+        <span class="qstep">6 of 9</span>
         <h2>And your company?</h2>
         <input class="field" type="text" placeholder="Brand or company" autocomplete="organization">
         <div class="q-actions"><button class="btn" data-next>Next</button><button class="back" data-back>Back</button></div>
       </div>
 
       <div class="q" data-q="email">
-        <span class="label">7 of 9</span>
+        <span class="qstep">7 of 9</span>
         <h2>Where should we reply?</h2>
         <input class="field" type="email" placeholder="you@company.com" autocomplete="email" required>
         <div class="q-actions"><button class="btn" data-next>Next</button><button class="back" data-back>Back</button></div>
       </div>
 
       <div class="q" data-q="phone">
-        <span class="label">8 of 9</span>
+        <span class="qstep">8 of 9</span>
         <h2>A phone or WhatsApp number, if you prefer a call.</h2>
         <input class="field" type="tel" placeholder="Optional" autocomplete="tel">
         <div class="q-actions"><button class="btn" data-next>Next</button><button class="back" data-back>Back</button></div>
       </div>
 
       <div class="q" data-q="notes">
-        <span class="label">9 of 9</span>
+        <span class="qstep">9 of 9</span>
         <h2>Anything else we should know?</h2>
         <textarea class="field" placeholder="Fabric, sizing, packaging, a tech pack you will send, anything at all"></textarea>
         <div class="q-actions"><button class="btn" data-next>Review</button><button class="back" data-back>Back</button></div>
       </div>
 
       <div class="q" data-q="summary">
-        <span class="label">Review</span>
+        <span class="qstep">Review</span>
         <h2>Here is what we will receive.</h2>
         <div class="summary"></div>
         <div class="q-actions"><a class="btn solid" data-send href="#">Send to Silkstone</a><button class="back" data-back>Back</button></div>
-        <p class="small" style="margin-top:22px">Sending opens your mail app with this summary addressed to info@silkstone-textile.com. We reply within one working day.</p>
+        <p class="small" style="margin-top:22px">Sending opens your mail app with this summary addressed to info@silkstone-textile.com. We reply within one working day with a quotation, a sample plan or a visit date, and the company profile.</p>
       </div>
     </div>
 
-    <div class="rv stack" style="padding-top:8px">
-      <div class="rows">
-        <div class="row"><div class="k">Email</div><div class="v"><a class="link" href="mailto:info@silkstone-textile.com">info@silkstone-textile.com</a></div></div>
-        <div class="row"><div class="k">WhatsApp</div><div class="v">Number to follow</div></div>
-        <div class="row"><div class="k">Factory</div><div class="v">Plot No. 236, 6 Million Area, Southern Industrial Zone, 10th of Ramadan City, Egypt</div></div>
-        <div class="row"><div class="k">Visits</div><div class="v">Buyers are welcome on the floor. 10th of Ramadan City is about an hour from Cairo International Airport.</div></div>
-        <div class="row"><div class="k">Documents</div><div class="v">Company profile, product catalogue and certificate copies on request.</div></div>
-      </div>
-      <div class="ph wide">Photograph to follow<br>Factory exterior</div>
-    </div>
+    <aside class="contact-side rv">
+      <div class="blank tall"><span>Photograph to follow<br>Factory exterior</span></div>
+      <dl class="facts">
+        <div><dt>Email</dt><dd><a class="link" href="mailto:info@silkstone-textile.com">info@silkstone-textile.com</a></dd></div>
+        <div><dt>WhatsApp</dt><dd>Number to follow</dd></div>
+        <div><dt>Factory</dt><dd>Plot No. 236, 6 Million Area, Southern Industrial Zone, 10th of Ramadan City, Egypt</dd></div>
+        <div><dt>Visits</dt><dd>Buyers are welcome on the floor, about an hour from Cairo International Airport.</dd></div>
+        <div><dt>Documents</dt><dd>Company profile, product catalogue and certificate copies on request.</dd></div>
+      </dl>
+    </aside>
   </div>
 </div></section>
 </main>
@@ -129,6 +127,6 @@
   </div>
   <div class="bottom"><span>© 2026 Silkstone Fashion</span><span>Photographs of the factory to follow.</span></div>
 </div></footer>
-<script src="assets/site.js?v=4"></script>
+<script src="assets/site.js?v=13"></script>
 </body>
 </html>
