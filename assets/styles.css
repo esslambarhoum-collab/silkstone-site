@@ -514,3 +514,23 @@ button,a,[role="button"]{touch-action:manipulation}
 .stamp b{font-family:var(--stone);font-weight:400;font-size:26px;display:block;line-height:1}
 .stamp span{display:block;font-family:var(--silk);font-style:italic;font-size:16px;color:var(--graphite);margin-top:4px}
 .stamp small{display:block;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);margin-top:8px;line-height:1.4}
+
+/* ---------- about ---------- */
+.about-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.about-facts h2{margin-bottom:18px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:18px 32px;margin:28px 0 0}
+.facts div{margin:0}
+.facts dt{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ash);margin-bottom:4px}
+.facts dd{margin:0;font-size:15px;color:var(--black)}
+.partners{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,96px);margin-top:48px;align-items:start}
+.partner{display:grid;grid-template-rows:120px auto 1fr auto;gap:18px;height:100%}
+.partner .plogo{height:120px;display:flex;align-items:center}
+.partner .plogo img{height:100px;width:auto}
+.partner .plogo.dark{background:var(--black);padding:0 24px;width:max-content}
+.partner .plogo.dark img{height:auto;width:120px}
+.partner h3{font-size:24px}
+.partner p{color:var(--graphite);margin:0}
+.leader{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(24px,4vw,56px);margin-top:48px;align-items:start}
+.leader h3{font-size:28px;margin-bottom:6px}
+.blank.portrait{aspect-ratio:4/5}
+@media (max-width:900px){.about-hero,.partners,.leader{grid-template-columns:1fr}.facts{grid-template-columns:1fr}}
