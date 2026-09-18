@@ -420,3 +420,41 @@ footer .bottom a{display:inline;padding:0}
 .item-body model-viewer{height:440px}
 @media (max-width:900px){.item{grid-template-columns:1fr}.rail-stage{height:auto}}
 @media (prefers-reduced-motion:reduce){.t-panel-slide{transition:none!important}}
+
+/* accessibility */
+.skip{position:absolute;left:16px;top:-60px;z-index:100;background:var(--black);color:var(--bone);padding:10px 16px;font-size:13px;letter-spacing:.08em;transition:top .2s}
+.skip:focus{top:16px}
+button,a,[role="button"]{touch-action:manipulation}
+
+/* ---------- capabilities: drawn process ---------- */
+.pstages{position:relative}
+.pthread{position:absolute;left:0;top:0;pointer-events:none;overflow:visible}
+.pthread path{fill:none;stroke:var(--black);stroke-width:1;stroke-dasharray:4 5;opacity:.5}
+.pstage{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,5vw,72px);align-items:center;padding:clamp(40px,6vw,80px) 0}
+.pstage:nth-child(odd) figure{order:2}
+.pstage figure{margin:0;position:relative;color:var(--black)}
+.pstage figure svg{width:100%;max-width:420px;height:auto;display:block;margin:0 auto}
+.pstage .anchor{position:absolute;left:50%;top:50%;width:1px;height:1px}
+.pstage .ptext h2{font-size:clamp(26px,3vw,40px)}
+.pstage .ptext p{margin-top:16px;color:var(--graphite);max-width:48ch}
+.pstage:not(.drawn) .ptext{opacity:.55;transition:opacity 1s var(--ease)}
+.pstage.drawn .ptext{opacity:1}
+@media (max-width:820px){.pstage{grid-template-columns:1fr;gap:20px}.pstage:nth-child(odd) figure{order:0}.pstage figure svg{max-width:300px}.pthread{display:none}}
+
+/* floor plan */
+.plan-wrap{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start;margin-top:40px}
+.plan{width:100%;height:auto;display:block;font-family:var(--font)}
+.plan .shell{fill:none;stroke:var(--black);stroke-width:1.2}
+.plan g[data-room] rect{fill:var(--white);stroke:var(--line-strong);stroke-width:1;transition:fill .5s var(--ease),stroke .5s var(--ease);cursor:pointer}
+.plan g[data-room]:hover rect,.plan g[data-room].on rect{fill:var(--bone);stroke:var(--black)}
+.plan g[data-room]:focus-visible{outline:none}
+.plan g[data-room]:focus-visible rect{stroke:var(--black);stroke-width:2}
+.plan text{font-size:16px;fill:var(--black);text-anchor:middle;font-weight:400;pointer-events:none}
+.plan text.sub{font-size:11px;fill:var(--ash);letter-spacing:.06em}
+.plan .lines line{stroke:var(--line);stroke-width:1;pointer-events:none}
+.plan-notes{position:relative;min-height:180px}
+.plan-note{position:absolute;inset:0;opacity:0;transform:translateY(10px);transition:opacity .5s var(--ease),transform .5s var(--ease);pointer-events:none}
+.plan-note.on{opacity:1;transform:none;pointer-events:auto}
+.plan-note h3{font-size:22px;margin-bottom:12px}
+.plan-note p{color:var(--graphite)}
+@media (max-width:900px){.plan-wrap{grid-template-columns:1fr}.plan text{font-size:20px}.plan text.sub{font-size:13px}}
