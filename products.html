@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Products · Silkstone Fashion</title>
-<meta name="description" content="Knitwear made to your tech pack in Egypt: T-shirts, sweatshirts and hoodies. Specifications, 3D models, minimum 20,000 pieces per style, trial orders from 10,000.">
+<meta name="description" content="Knitwear made to your tech pack in Egypt: T-shirts, sweatshirts, hoodies and pants. Specifications, 3D models, minimum 20,000 pieces per style, trial orders from 10,000.">
 <link rel="canonical" href="https://silkstone-textile.com/products.html">
 <link rel="icon" href="assets/logos/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@300;400;500&family=Bodoni+Moda:ital,opsz,wght@1,6..96,400;1,6..96,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=4">
+<link rel="stylesheet" href="assets/styles.css?v=8">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
 </head>
 <body>
-<div class="loader" aria-hidden="true"><svg viewBox="0 0 104 62"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg></div>
 <header class="nav"><div class="wrap">
   <a class="brand" href="index.html" aria-label="Silkstone home"><svg viewBox="0 0 104 62" aria-hidden="true"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg>SILKSTONE</a>
   <nav class="nav-links"><a href="about.html">About</a><a href="capabilities.html">Capabilities</a><a href="products.html">Products</a><a href="quality.html">Quality</a><a href="egypt.html">Egypt</a><a href="techpack.html">Tech pack</a></nav>
@@ -24,185 +24,173 @@
 <div class="menu"><a href="index.html">Home</a><a href="about.html">About</a><a href="capabilities.html">Capabilities</a><a href="products.html">Products</a><a href="quality.html">Quality</a><a href="traced-order.html">Every stone in place</a><a href="egypt.html">Egypt</a><a href="techpack.html">Tech pack generator</a><a href="contact.html">Contact</a></div>
 
 <main>
-<section class="pagehead"><div class="wrap">
-  <span class="label">Products</span>
-  <h1>The wardrobe.</h1>
-  <p class="lead">Choose a category on the rail. The hanger brings the garment in. Every piece is made to your tech pack, so the specifications below are our standard constructions, not limits.</p>
+<section class="pagehead short"><div class="wrap">
+  <h1>The <em>wardrobe.</em></h1>
+  <p class="lead">Every style we make hangs on this rail. Drag along it, choose a garment, and its specification opens beneath. Each piece is made to your tech pack, so what you see is our standard construction, not a limit.</p>
 </div></section>
 
-<section class="tight"><div class="wrap">
-  <div class="wardrobe rv">
-    <div class="rail" role="tablist">
-      <button data-key="tshirt" role="tab">T-shirts</button>
-      <button data-key="sweatshirt" role="tab">Sweatshirts</button>
-      <button data-key="hoodie" role="tab">Hoodies</button>
-      <button data-key="custom" role="tab">Made to your spec</button>
-    </div>
-    <div class="wall">
-      <div class="hanger" data-key="tshirt"><img src="assets/img/tshirt.jpg" alt="White T-shirt on a black wire hanger" width="1408" height="768"></div>
-      <div class="hanger" data-key="sweatshirt"><img src="assets/img/sweatshirt.jpg" alt="Grey sweatshirt on a black wire hanger" width="1408" height="768"></div>
-      <div class="hanger" data-key="hoodie"><img src="assets/img/hoodie.jpg" alt="Black hoodie on a black wire hanger" width="1408" height="768"></div>
-      <div class="hanger" data-key="custom"><svg viewBox="0 0 104 62" style="width:min(220px,40vw);overflow:visible"><path fill="none" stroke="#151513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg></div>
-      <div class="hint">Choose a category on the rail</div>
-    </div>
+<section class="tight" style="padding-top:0"><div class="wrap">
+  <div class="cat-tabs" role="tablist" aria-label="Garment categories">
+    <button data-key="tshirt" role="tab">T-shirts</button>
+    <button data-key="sweatshirt" role="tab">Sweatshirts</button>
+    <button data-key="hoodie" role="tab">Hoodies</button>
+    <button data-key="pants" role="tab">Pants</button>
+    <button data-key="custom" role="tab">Your style</button>
+  </div>
 
-    <div class="item" data-key="tshirt" hidden>
-      <div>
-        <span class="label">Zarcan range · knitwear</span>
-        <h3 style="margin-top:14px">T-shirt basic</h3>
-        <p class="muted" style="margin-top:12px">Single jersey, round neck, set-in sleeve. The garment every basics programme starts with. Made in your weight, your fibre and your fit.</p>
-        <div class="actions">
-          <a class="btn" href="techpack.html?garment=tshirt" data-add="tshirt">Add to tech pack</a>
-          <a class="btn quiet" href="contact.html">Request a sample</a>
-        </div>
-      </div>
-      <div>
-        <div class="tabs"><button class="on" data-pane="spec">Spec sheet</button><button data-pane="3d">3D model</button><button data-pane="print">Print and embroidery</button></div>
-        <div class="pane on" data-pane="spec">
-          <table class="spec">
-            <tr><td>Construction</td><td>Single jersey, round neck, rib neckband, set-in sleeve</td></tr>
-            <tr><td>Composition</td><td>100% cotton as standard. Organic (GOTS, OCS) and recycled (RCS, GRS) blends available with certificates</td></tr>
-            <tr><td>Weight range</td><td>140 to 220 gsm, to your tech pack</td></tr>
-            <tr><td>Finish</td><td>Enzyme wash, silicone soft finish, or plain, to your specification</td></tr>
-            <tr><td>Sizes</td><td>XS to 3XL, graded to your size chart</td></tr>
-            <tr><td>Minimum order</td><td>20,000 pieces per style. Trial order 10,000</td></tr>
-            <tr><td>Lead time</td><td>Quoted per order once fabric is confirmed</td></tr>
-            <tr><td>Order types</td><td>CM, CMT, FOB</td></tr>
-          </table>
-        </div>
-        <div class="pane" data-pane="3d">
-          <model-viewer src="assets/models/tshirt.glb" alt="3D model of a T-shirt" loading="eager" camera-controls auto-rotate shadow-intensity="0.6" exposure="1" interaction-prompt="none"></model-viewer>
-          <p class="mv-note">Drag to turn. Illustrative model, not a Silkstone sample.</p>
-        </div>
-        <div class="pane" data-pane="print">
-          <table class="spec">
-            <tr><td>Printing</td><td>Rotary, continuous, screen and transfer, in house</td></tr>
-            <tr><td>Embroidery</td><td>In-house embroidery department, chest and sleeve placements</td></tr>
-            <tr><td>Labels</td><td>Woven or printed neck labels, care labels, hangtags to your artwork</td></tr>
-            <tr><td>Packing</td><td>Folded and poly-bagged, size stickers, export cartons, metal detected</td></tr>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <div class="item" data-key="sweatshirt" hidden>
-      <div>
-        <span class="label">Zarcan range · knitwear</span>
-        <h3 style="margin-top:14px">Sweatshirt basic</h3>
-        <p class="muted" style="margin-top:12px">Crew neck, rib cuffs and hem, in loopback or brushed fleece. Built to hold its shape through the wash.</p>
-        <div class="actions">
-          <a class="btn" href="techpack.html?garment=sweatshirt" data-add="sweatshirt">Add to tech pack</a>
-          <a class="btn quiet" href="contact.html">Request a sample</a>
-        </div>
-      </div>
-      <div>
-        <div class="tabs"><button class="on" data-pane="spec">Spec sheet</button><button data-pane="3d">3D model</button><button data-pane="print">Print and embroidery</button></div>
-        <div class="pane on" data-pane="spec">
-          <table class="spec">
-            <tr><td>Construction</td><td>Crew neck, rib neckband with V-insert option, rib cuffs and hem, raglan or set-in sleeve</td></tr>
-            <tr><td>Composition</td><td>Cotton or cotton and polyester fleece. Organic and recycled options with certificates</td></tr>
-            <tr><td>Weight range</td><td>260 to 400 gsm, loopback or brushed</td></tr>
-            <tr><td>Finish</td><td>Brushed inside, enzyme or silicone finish to specification</td></tr>
-            <tr><td>Sizes</td><td>XS to 3XL, graded to your size chart</td></tr>
-            <tr><td>Minimum order</td><td>20,000 pieces per style. Trial order 10,000</td></tr>
-            <tr><td>Lead time</td><td>Quoted per order once fabric is confirmed</td></tr>
-            <tr><td>Order types</td><td>CM, CMT, FOB</td></tr>
-          </table>
-        </div>
-        <div class="pane" data-pane="3d">
-          <div class="ph wide">3D model in preparation<br>Sweatshirt basic</div>
-        </div>
-        <div class="pane" data-pane="print">
-          <table class="spec">
-            <tr><td>Printing</td><td>Rotary, continuous, screen and transfer, in house</td></tr>
-            <tr><td>Embroidery</td><td>Chest, sleeve and back placements</td></tr>
-            <tr><td>Labels</td><td>Woven or printed neck labels, care labels, hangtags</td></tr>
-            <tr><td>Packing</td><td>Folded and poly-bagged, export cartons, metal detected</td></tr>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <div class="item" data-key="hoodie" hidden>
-      <div>
-        <span class="label">Zarcan range · knitwear</span>
-        <h3 style="margin-top:14px">Hoodie basic</h3>
-        <p class="muted" style="margin-top:12px">Pullover hood with drawcord and kangaroo pocket, or full zip. Fleece weight and hood lining to your tech pack.</p>
-        <div class="actions">
-          <a class="btn" href="techpack.html?garment=hoodie" data-add="hoodie">Add to tech pack</a>
-          <a class="btn quiet" href="contact.html">Request a sample</a>
-        </div>
-      </div>
-      <div>
-        <div class="tabs"><button class="on" data-pane="spec">Spec sheet</button><button data-pane="3d">3D model</button><button data-pane="print">Print and embroidery</button></div>
-        <div class="pane on" data-pane="spec">
-          <table class="spec">
-            <tr><td>Construction</td><td>Pullover or full zip, two-piece hood, drawcord with metal or plastic tips, kangaroo pocket, rib cuffs and hem</td></tr>
-            <tr><td>Composition</td><td>Cotton or cotton and polyester fleece. Organic and recycled options with certificates</td></tr>
-            <tr><td>Weight range</td><td>280 to 450 gsm, loopback or brushed</td></tr>
-            <tr><td>Finish</td><td>Brushed inside, garment wash options to specification</td></tr>
-            <tr><td>Sizes</td><td>XS to 3XL, graded to your size chart</td></tr>
-            <tr><td>Minimum order</td><td>20,000 pieces per style. Trial order 10,000</td></tr>
-            <tr><td>Lead time</td><td>Quoted per order once fabric is confirmed</td></tr>
-            <tr><td>Order types</td><td>CM, CMT, FOB</td></tr>
-          </table>
-        </div>
-        <div class="pane" data-pane="3d">
-          <model-viewer src="assets/models/hoodie.glb" alt="3D model of a hoodie" loading="eager" camera-controls auto-rotate shadow-intensity="0.6" exposure="1" interaction-prompt="none"></model-viewer>
-          <p class="mv-note">Drag to turn. Illustrative model, not a Silkstone sample.</p>
-        </div>
-        <div class="pane" data-pane="print">
-          <table class="spec">
-            <tr><td>Printing</td><td>Rotary, continuous, screen and transfer, in house</td></tr>
-            <tr><td>Embroidery</td><td>Chest, sleeve, hood and back placements</td></tr>
-            <tr><td>Trims</td><td>Drawcords, eyelets, zips and pullers pull-tested per batch</td></tr>
-            <tr><td>Packing</td><td>Folded and poly-bagged, export cartons, metal detected</td></tr>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <div class="item" data-key="custom" hidden>
-      <div>
-        <span class="label">Your style</span>
-        <h3 style="margin-top:14px">Made to your tech pack.</h3>
-        <p class="muted" style="margin-top:12px">Long sleeves, polos, vests, joggers, children's sizes, or a construction we have not listed. If it is knitted and sewn, send the tech pack and we will quote it.</p>
-        <div class="actions">
-          <a class="btn" href="techpack.html">Build a tech pack</a>
-          <a class="btn quiet" href="contact.html">Send us yours</a>
-        </div>
-      </div>
-      <div class="rows">
-        <div class="row"><div class="k">Fabrics</div><div class="v">Single jersey, interlock, rib, pique, loopback, brushed fleece</div></div>
-        <div class="row"><div class="k">Fibre</div><div class="v">Cotton, organic cotton, recycled cotton, cotton blends, with certificates where claimed</div></div>
-        <div class="row"><div class="k">Decoration</div><div class="v">Print, embroidery, appliqué, in house</div></div>
-        <div class="row"><div class="k">Minimum</div><div class="v">20,000 pieces per style. 10,000 for a trial</div></div>
+  <div id="rail3d" class="rail-stage" data-slots='[{"key":"tshirt","label":"T-shirts","model":"assets/models/tshirt.glb","height":0.72},{"key":"sweatshirt","label":"Sweatshirts"},{"key":"hoodie","label":"Hoodies","model":"assets/models/hoodie.glb","height":0.76},{"key":"pants","label":"Pants"},{"key":"custom","label":"Your style"}]'>
+    <canvas tabindex="0" aria-label="Clothes rail with Silkstone garments. Drag to move along the rail, click a garment to open it, arrow keys to step between garments."></canvas>
+    <div class="rail-labels" aria-hidden="true"></div>
+    <p class="rail-hint">Drag the rail, or choose a garment</p>
+    <div class="rail-fallback">
+      <div class="rail-scroller">
+        <button data-key="tshirt"><img src="assets/img/tshirt-800.webp" alt="White T-shirt on a hanger" width="800" height="436" loading="lazy"><span>T-shirts</span></button>
+        <button data-key="sweatshirt"><img src="assets/img/sweatshirt-800.webp" alt="Grey sweatshirt on a hanger" width="800" height="436" loading="lazy"><span>Sweatshirts</span></button>
+        <button data-key="hoodie"><img src="assets/img/hoodie-800.webp" alt="Black hoodie on a hanger" width="800" height="436" loading="lazy"><span>Hoodies</span></button>
+        <button data-key="pants"><div class="blank-hanger"><svg viewBox="0 0 104 62" aria-hidden="true"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg></div><span>Pants · to follow</span></button>
+        <button data-key="custom"><div class="blank-hanger"><svg viewBox="0 0 104 62" aria-hidden="true"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg></div><span>Your style</span></button>
       </div>
     </div>
   </div>
-  <p class="small" style="margin-top:16px">Garment photographs are sample images until product photography is complete. Specifications are standard constructions and are finalised per order.</p>
+
+  <div id="itemPanel" class="item-panel t-panel-slide" data-open="false" aria-live="polite">
+
+    <article class="item" data-key="tshirt" hidden>
+      <div class="item-head"><h2>T-shirt <em>basic</em></h2><p class="muted">Single jersey, round neck, set-in sleeve. The garment every basics programme starts with, made in your weight, your fibre and your fit.</p>
+        <div class="actions"><a class="btn solid" href="techpack.html?garment=tshirt" data-add="tshirt">Add to tech pack</a><a class="btn quiet" href="contact.html">Request a sample</a></div></div>
+      <div class="item-body">
+        <div class="tabs"><button class="on" data-pane="spec">Specification</button><button data-pane="3d">Turn it</button><button data-pane="print">Print and embroidery</button></div>
+        <div class="pane on" data-pane="spec"><table class="spec">
+          <tr><td>Construction</td><td>Single jersey, round neck, rib neckband, set-in sleeve</td></tr>
+          <tr><td>Composition</td><td>100% cotton as standard. Organic (GOTS, OCS) and recycled (RCS, GRS) blends with certificates</td></tr>
+          <tr><td>Weight</td><td>140 to 220 gsm, to your tech pack</td></tr>
+          <tr><td>Finish</td><td>Enzyme wash, silicone soft, or plain</td></tr>
+          <tr><td>Sizes</td><td>XS to 3XL, graded to your size chart</td></tr>
+          <tr><td>Minimum</td><td>20,000 pieces per style. Trial order 10,000</td></tr>
+          <tr><td>Lead time</td><td>Quoted per order once fabric is confirmed</td></tr>
+          <tr><td>Order types</td><td>CM, CMT, FOB</td></tr>
+        </table></div>
+        <div class="pane" data-pane="3d"><model-viewer src="assets/models/tshirt.glb" alt="3D model of a T-shirt" loading="lazy" camera-controls auto-rotate shadow-intensity="0.6" exposure="1" interaction-prompt="none"></model-viewer><p class="mv-note">Drag to turn. Illustrative model until Silkstone samples are scanned.</p></div>
+        <div class="pane" data-pane="print"><table class="spec">
+          <tr><td>Printing</td><td>Rotary, continuous, screen and transfer, in house</td></tr>
+          <tr><td>Embroidery</td><td>Chest and sleeve placements, in house</td></tr>
+          <tr><td>Labels</td><td>Woven or printed neck labels, care labels, hangtags to your artwork</td></tr>
+          <tr><td>Packing</td><td>Folded and poly-bagged, size stickers, export cartons, metal detected</td></tr>
+        </table></div>
+      </div>
+    </article>
+
+    <article class="item" data-key="sweatshirt" hidden>
+      <div class="item-head"><h2>Sweatshirt <em>basic</em></h2><p class="muted">Crew neck, rib cuffs and hem, in loopback or brushed fleece. Built to hold its shape through the wash.</p>
+        <div class="actions"><a class="btn solid" href="techpack.html?garment=sweatshirt" data-add="sweatshirt">Add to tech pack</a><a class="btn quiet" href="contact.html">Request a sample</a></div></div>
+      <div class="item-body">
+        <div class="tabs"><button class="on" data-pane="spec">Specification</button><button data-pane="3d">Turn it</button><button data-pane="print">Print and embroidery</button></div>
+        <div class="pane on" data-pane="spec"><table class="spec">
+          <tr><td>Construction</td><td>Crew neck, rib neckband with V-insert option, rib cuffs and hem, raglan or set-in sleeve</td></tr>
+          <tr><td>Composition</td><td>Cotton or cotton and polyester fleece. Organic and recycled options with certificates</td></tr>
+          <tr><td>Weight</td><td>260 to 400 gsm, loopback or brushed</td></tr>
+          <tr><td>Finish</td><td>Brushed inside, enzyme or silicone finish</td></tr>
+          <tr><td>Sizes</td><td>XS to 3XL, graded to your size chart</td></tr>
+          <tr><td>Minimum</td><td>20,000 pieces per style. Trial order 10,000</td></tr>
+          <tr><td>Lead time</td><td>Quoted per order once fabric is confirmed</td></tr>
+          <tr><td>Order types</td><td>CM, CMT, FOB</td></tr>
+        </table></div>
+        <div class="pane" data-pane="3d"><div class="blank tall"><span>3D model to follow<br>Sweatshirt basic</span></div></div>
+        <div class="pane" data-pane="print"><table class="spec">
+          <tr><td>Printing</td><td>Rotary, continuous, screen and transfer, in house</td></tr>
+          <tr><td>Embroidery</td><td>Chest, sleeve and back placements</td></tr>
+          <tr><td>Labels</td><td>Woven or printed neck labels, care labels, hangtags</td></tr>
+          <tr><td>Packing</td><td>Folded and poly-bagged, export cartons, metal detected</td></tr>
+        </table></div>
+      </div>
+    </article>
+
+    <article class="item" data-key="hoodie" hidden>
+      <div class="item-head"><h2>Hoodie <em>basic</em></h2><p class="muted">Pullover hood with drawcord and kangaroo pocket, or full zip. Fleece weight and hood lining to your tech pack.</p>
+        <div class="actions"><a class="btn solid" href="techpack.html?garment=hoodie" data-add="hoodie">Add to tech pack</a><a class="btn quiet" href="contact.html">Request a sample</a></div></div>
+      <div class="item-body">
+        <div class="tabs"><button class="on" data-pane="spec">Specification</button><button data-pane="3d">Turn it</button><button data-pane="print">Print and embroidery</button></div>
+        <div class="pane on" data-pane="spec"><table class="spec">
+          <tr><td>Construction</td><td>Pullover or full zip, two-piece hood, drawcord with metal or plastic tips, kangaroo pocket, rib cuffs and hem</td></tr>
+          <tr><td>Composition</td><td>Cotton or cotton and polyester fleece. Organic and recycled options with certificates</td></tr>
+          <tr><td>Weight</td><td>280 to 450 gsm, loopback or brushed</td></tr>
+          <tr><td>Finish</td><td>Brushed inside, garment wash options</td></tr>
+          <tr><td>Sizes</td><td>XS to 3XL, graded to your size chart</td></tr>
+          <tr><td>Minimum</td><td>20,000 pieces per style. Trial order 10,000</td></tr>
+          <tr><td>Lead time</td><td>Quoted per order once fabric is confirmed</td></tr>
+          <tr><td>Order types</td><td>CM, CMT, FOB</td></tr>
+        </table></div>
+        <div class="pane" data-pane="3d"><model-viewer src="assets/models/hoodie.glb" alt="3D model of a hoodie" loading="lazy" camera-controls auto-rotate shadow-intensity="0.6" exposure="1" interaction-prompt="none"></model-viewer><p class="mv-note">Drag to turn. Illustrative model until Silkstone samples are scanned.</p></div>
+        <div class="pane" data-pane="print"><table class="spec">
+          <tr><td>Printing</td><td>Rotary, continuous, screen and transfer, in house</td></tr>
+          <tr><td>Embroidery</td><td>Chest, sleeve, hood and back placements</td></tr>
+          <tr><td>Trims</td><td>Drawcords, eyelets, zips and pullers, pull-tested per batch</td></tr>
+          <tr><td>Packing</td><td>Folded and poly-bagged, export cartons, metal detected</td></tr>
+        </table></div>
+      </div>
+    </article>
+
+    <article class="item" data-key="pants" hidden>
+      <div class="item-head"><h2>Pants</h2><p class="muted">Knitted bottoms are made on the same floor. Styles, constructions and photographs are being added.</p>
+        <div class="actions"><a class="btn quiet" href="contact.html">Ask about pants</a></div></div>
+      <div class="item-body"><div class="blank wide"><span>Styles to follow<br>Joggers, shorts and knitted bottoms</span></div></div>
+    </article>
+
+    <article class="item" data-key="custom" hidden>
+      <div class="item-head"><h2>Made to <em>your spec.</em></h2><p class="muted">Long sleeves, polos, vests, children's sizes, or a construction not on the rail. If it is knitted and sewn, send the tech pack and we quote it.</p>
+        <div class="actions"><a class="btn solid" href="contact.html">Send us your tech pack</a></div></div>
+      <div class="item-body"><table class="spec">
+        <tr><td>Fabrics</td><td>Single jersey, interlock, rib, pique, loopback, brushed fleece</td></tr>
+        <tr><td>Fibre</td><td>Cotton, organic cotton, recycled cotton, cotton blends, with certificates where claimed</td></tr>
+        <tr><td>Decoration</td><td>Print, embroidery, appliqué, in house</td></tr>
+        <tr><td>Minimum</td><td>20,000 pieces per style. 10,000 for a trial</td></tr>
+      </table></div>
+    </article>
+
+  </div>
 </div></section>
 
 <section class="rule"><div class="wrap two">
   <div class="rv stack">
-    <span class="label">Catalogue</span>
-    <h2>The product catalogue, as a PDF.</h2>
-    <p class="muted">A printable catalogue with every construction, specification table and photograph is being rebuilt to match this site. Until it is ready, request the current version and we will send it.</p>
+    <h2>The catalogue, <em>as a PDF.</em></h2>
+    <p class="muted">Every construction, specification table and photograph in one printable document, rebuilt to match this site. Until it is ready, ask and we send the current version.</p>
     <a class="link" href="contact.html">Request the catalogue</a>
   </div>
-  <figure class="fig rv shadowed"><img src="assets/img/hoodie.jpg" alt="Black hoodie on a hanger" width="1408" height="768"></figure>
+  <div class="blank wide rv"><span>Catalogue cover to follow</span></div>
 </div></section>
 </main>
 
 <footer><div class="wrap">
   <div class="cols">
-    <div><div class="brand"><svg viewBox="0 0 104 62" aria-hidden="true"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg>SILKSTONE</div><p class="small" style="margin-top:16px">Knitwear manufacturing, 10th of Ramadan City, Egypt.<br>A Boldbridge Capital and Aletex Group partnership.</p></div>
+    <div><div class="brand"><svg viewBox="0 0 104 62" aria-hidden="true"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg>SILKSTONE</div><p class="small" style="margin-top:16px">Knitwear manufacturing, Egypt.<br>A Boldbridge Capital and Aletex Group partnership.</p></div>
     <div><h4>Company</h4><a href="about.html">About</a><a href="capabilities.html">Capabilities</a><a href="quality.html">Quality</a><a href="traced-order.html">Every stone in place</a><a href="egypt.html">Egypt</a></div>
     <div><h4>Work with us</h4><a href="products.html">Products</a><a href="techpack.html">Tech pack generator</a><a href="contact.html">Request a quote</a><a href="contact.html">Company profile, on request</a><a href="contact.html">Product catalogue, on request</a></div>
     <div><h4>Contact</h4><a href="mailto:info@silkstone-textile.com">info@silkstone-textile.com</a><a href="contact.html">Plot 236, 6 Million Area, Southern Industrial Zone, 10th of Ramadan City, Egypt</a><a href="https://www.linkedin.com/company/silkstone-fashion/" target="_blank" rel="noopener">LinkedIn</a></div>
   </div>
-  <div class="bottom"><span>© 2026 Silkstone Fashion</span><span>Photographs of the factory to follow.</span></div>
+  <div class="bottom"><span>© 2026 Silkstone Fashion</span><span><a href="legal.html#privacy">Privacy</a> · <a href="legal.html#terms">Terms</a> · <a href="legal.html#cookies">Cookies</a></span></div>
 </div></footer>
-<script src="assets/site.js?v=4"></script>
+
+<script src="assets/site.js?v=6"></script>
+<script type="module" src="assets/rail.js?v=7"></script>
+<script>
+(function(){
+  var host=document.getElementById('rail3d'), panel=document.getElementById('itemPanel');
+  var tabs=document.querySelectorAll('.cat-tabs button'), items=panel.querySelectorAll('.item');
+  function show(key, scroll){
+    items.forEach(function(it){ it.hidden = it.dataset.key!==key; });
+    tabs.forEach(function(b){ b.classList.toggle('on', b.dataset.key===key); b.setAttribute('aria-selected', b.dataset.key===key?'true':'false'); });
+    panel.dataset.open='true';
+    try{ history.replaceState(null,'','#'+key); }catch(e){}
+    if(scroll){ var top=panel.getBoundingClientRect().top+window.scrollY-110; if(Math.abs(window.scrollY-top)>120) window.scrollTo({top:top,behavior:'smooth'}); }
+  }
+  tabs.forEach(function(b){ b.addEventListener('click', function(){ if(window.silkRail) window.silkRail.select(b.dataset.key); else show(b.dataset.key,false); }); });
+  host.addEventListener('rail:select', function(e){ show(e.detail.key, e.detail.fromRail); });
+  host.addEventListener('rail:clear', function(){ panel.dataset.open='false'; tabs.forEach(function(b){ b.classList.remove('on'); }); });
+  host.querySelectorAll('.rail-fallback button').forEach(function(b){ b.addEventListener('click', function(){ host.querySelectorAll('.rail-fallback button').forEach(function(x){ x.classList.toggle('on', x===b); }); show(b.dataset.key,true); }); });
+  panel.querySelectorAll('.tabs button').forEach(function(b){ b.addEventListener('click', function(){ var it=b.closest('.item'); it.querySelectorAll('.tabs button').forEach(function(x){ x.classList.toggle('on', x===b); }); it.querySelectorAll('.pane').forEach(function(p){ p.classList.toggle('on', p.dataset.pane===b.dataset.pane); }); }); });
+  panel.querySelectorAll('[data-add]').forEach(function(b){ b.addEventListener('click', function(){ var list=[]; try{ list=JSON.parse(localStorage.getItem('silkstone_tp')||'[]'); }catch(e){} if(list.indexOf(b.dataset.add)<0) list.push(b.dataset.add); try{ localStorage.setItem('silkstone_tp', JSON.stringify(list)); }catch(e){} }); });
+  var initial=(location.hash||'').replace('#',''); if(initial && panel.querySelector('.item[data-key="'+initial+'"]')){ setTimeout(function(){ if(window.silkRail) window.silkRail.select(initial); else show(initial,false); }, 900); }
+})();
+</script>
 </body>
 </html>

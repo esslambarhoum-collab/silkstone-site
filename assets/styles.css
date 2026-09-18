@@ -6,7 +6,8 @@
   --white:#FFFFFF;
   --bone:#F3F1EC;
   --sand:#E9E3D8;
-  --ash:#9B978F;
+  --ash:#6F6B63;
+  --ash-soft:#9B978F;
   --graphite:#4A4844;
   --black:#151513;
   --line:rgba(21,21,19,.12);
@@ -376,3 +377,46 @@ footer .bottom a{display:inline;padding:0}
   section{padding:0}
   @page{size:A4;margin:16mm}
 }
+
+/* ---------- products: the rail ---------- */
+.pagehead.short{padding-bottom:clamp(28px,4vw,48px)}
+.cat-tabs{display:flex;gap:clamp(18px,3vw,40px);flex-wrap:wrap;margin-bottom:18px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ash)}
+.cat-tabs button{background:none;border:0;padding:8px 0;color:inherit;font:inherit;letter-spacing:inherit;text-transform:inherit;border-bottom:1px solid transparent;transition:color .4s var(--ease),border-color .4s var(--ease);min-height:44px}
+.cat-tabs button:hover,.cat-tabs button.on{color:var(--black);border-color:var(--black)}
+.rail-stage{position:relative;height:clamp(420px,62vh,700px);background:var(--bone);border:1px solid var(--line);overflow:hidden}
+.rail-stage canvas{display:block;width:100%;height:100%;touch-action:pan-y;outline:none}
+.rail-stage canvas:focus-visible{box-shadow:inset 0 0 0 1px var(--black)}
+.rail-labels{position:absolute;inset:0;pointer-events:none}
+.rail-label{position:absolute;left:0;top:0;text-align:center;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ash);white-space:nowrap;transition:color .4s var(--ease),opacity .3s}
+.rail-label b{display:block;font-weight:400;color:var(--graphite)}
+.rail-label span{display:block;font-size:10px;letter-spacing:.14em;margin-top:2px}
+.rail-label.on b{color:var(--black)}
+.rail-hint{position:absolute;left:0;right:0;top:20px;margin:0;text-align:center;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ash);pointer-events:none}
+.rail-fallback{display:none}
+.rail-stage.fallback canvas,.rail-stage.fallback .rail-labels,.rail-stage.fallback .rail-hint{display:none}
+.rail-stage.fallback{height:auto;border:0;background:transparent;overflow:visible}
+.rail-stage.fallback .rail-fallback{display:block}
+.rail-scroller{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 0 14px;-webkit-overflow-scrolling:touch}
+.rail-scroller button{flex:0 0 78%;scroll-snap-align:start;background:var(--white);border:1px solid var(--line);padding:0 0 14px;text-align:center;font:inherit;color:var(--graphite);font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.rail-scroller button.on{border-color:var(--black);color:var(--black)}
+.rail-scroller img{width:100%;height:auto;display:block;margin-bottom:12px}
+.blank-hanger{aspect-ratio:800/436;display:grid;place-items:center;margin-bottom:12px;background:repeating-linear-gradient(135deg,transparent 0 22px,rgba(21,21,19,.035) 22px 23px)}
+.blank-hanger svg{width:34%;overflow:visible}
+.blank-hanger path{fill:none;stroke:var(--black);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.blank{display:grid;place-items:center;text-align:center;color:var(--ash);font-size:11px;letter-spacing:.24em;text-transform:uppercase;line-height:1.8;padding:24px;background:var(--white);border:1px solid var(--line);background-image:repeating-linear-gradient(135deg,transparent 0 22px,rgba(21,21,19,.035) 22px 23px)}
+.blank.wide{aspect-ratio:16/9}.blank.tall{aspect-ratio:4/3}
+
+/* item panel */
+:root{--panel-open-dur:520ms;--panel-close-dur:320ms;--panel-translate-y:28px;--panel-blur:2px;--panel-ease:cubic-bezier(.22,1,.36,1)}
+.t-panel-slide{transform:translateY(var(--panel-translate-y));opacity:0;filter:blur(var(--panel-blur));pointer-events:none;transition:transform var(--panel-close-dur) var(--panel-ease),opacity var(--panel-close-dur) var(--panel-ease),filter var(--panel-close-dur) var(--panel-ease)}
+.t-panel-slide[data-open="true"]{transform:none;opacity:1;filter:blur(0);pointer-events:auto;transition-duration:var(--panel-open-dur)}
+.item-panel{margin-top:32px}
+.item{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:clamp(28px,5vw,80px);padding:clamp(28px,4vw,48px) 0 0;align-items:start}
+.item[hidden]{display:none}
+.item-head h2{font-size:clamp(28px,3vw,42px)}
+.item-head p{margin-top:16px}
+.item .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.item .actions .btn{padding:12px 20px;font-size:11px;letter-spacing:.16em;min-height:44px}
+.item-body model-viewer{height:440px}
+@media (max-width:900px){.item{grid-template-columns:1fr}.rail-stage{height:auto}}
+@media (prefers-reduced-motion:reduce){.t-panel-slide{transition:none!important}}
