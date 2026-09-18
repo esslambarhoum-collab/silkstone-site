@@ -559,3 +559,8 @@ button,a,[role="button"]{touch-action:manipulation}
 .dept-nav{border-top:0}
 .dept-nav button{border-bottom:0;padding:10px 0}
 .dept-nav button.on{color:var(--black);font-weight:500}
+
+/* traced illustrations */
+.pstage figure svg.traced{width:100%;height:auto;display:block}
+.pstage figure svg.traced path{fill:currentColor;fill-opacity:0;stroke:currentColor;stroke-width:1.1;stroke-linejoin:round;transition:fill-opacity 1.2s var(--ease),stroke-width 1.2s var(--ease)}
+.pstage.drawn figure svg.traced path{fill-opacity:1;stroke-width:.5}

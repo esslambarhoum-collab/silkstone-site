@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@300;400;500&family=Bodoni+Moda:ital,opsz,wght@1,6..96,400;1,6..96,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=15">
+<link rel="stylesheet" href="assets/styles.css?v=16">
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
 </head>
@@ -33,22 +33,26 @@
 <section class="tight" style="padding-top:0"><div class="wrap">
   <div class="cat-tabs" role="tablist" aria-label="Garment categories">
     <button data-key="tshirt" role="tab">T-shirts</button>
+    <button data-key="longsleeve" role="tab">Long sleeves</button>
+    <button data-key="polo" role="tab">Polos</button>
     <button data-key="sweatshirt" role="tab">Sweatshirts</button>
     <button data-key="hoodie" role="tab">Hoodies</button>
-    <button data-key="pants" role="tab">Pants</button>
+    <button data-key="joggers" role="tab">Joggers</button>
     <button data-key="custom" role="tab">Your style</button>
   </div>
 
-  <div id="rail3d" class="rail-stage" data-slots='[{"key":"tshirt","label":"T-shirts","model":"assets/models/tshirt.glb","height":0.72},{"key":"sweatshirt","label":"Sweatshirts"},{"key":"hoodie","label":"Hoodies","model":"assets/models/hoodie.glb","height":0.76,"plain":"#1c1b19"},{"key":"pants","label":"Pants"},{"key":"custom","label":"Your style"}]'>
+  <div id="rail3d" class="rail-stage" data-slots='[{"key":"tshirt","label":"T-shirts","model":"assets/models/tshirt.glb","height":0.72},{"key":"longsleeve","label":"Long sleeves"},{"key":"polo","label":"Polos"},{"key":"sweatshirt","label":"Sweatshirts"},{"key":"hoodie","label":"Hoodies","model":"assets/models/hoodie.glb","height":0.76,"plain":"#1c1b19"},{"key":"joggers","label":"Joggers"},{"key":"custom","label":"Your style"}]'>
     <canvas tabindex="0" aria-label="Clothes rail with Silkstone garments. Drag to move along the rail, click a garment to open it, arrow keys to step between garments."></canvas>
     <div class="rail-labels" aria-hidden="true"></div>
     <p class="rail-hint">Drag the rail, or choose a garment</p>
     <div class="rail-fallback">
       <div class="rail-scroller">
-        <button data-key="tshirt"><img src="assets/img/tshirt-800.webp" alt="White T-shirt on a hanger" width="800" height="436" loading="lazy"><span>T-shirts</span></button>
-        <button data-key="sweatshirt"><img src="assets/img/sweatshirt-800.webp" alt="Grey sweatshirt on a hanger" width="800" height="436" loading="lazy"><span>Sweatshirts</span></button>
-        <button data-key="hoodie"><img src="assets/img/hoodie-800.webp" alt="Black hoodie on a hanger" width="800" height="436" loading="lazy"><span>Hoodies</span></button>
-        <button data-key="pants"><div class="blank-hanger"><svg viewBox="0 0 104 62" aria-hidden="true"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg></div><span>Pants · to follow</span></button>
+        <button data-key="tshirt"><img src="assets/img/garment-tshirt-800.webp" alt="White T-shirt on a hanger" width="800" height="436" loading="lazy"><span>T-shirts</span></button>
+        <button data-key="longsleeve"><img src="assets/img/garment-longsleeve-800.webp" alt="Off-white long-sleeve T-shirt on a hanger" width="800" height="436" loading="lazy"><span>Long sleeves</span></button>
+        <button data-key="polo"><img src="assets/img/garment-polo-800.webp" alt="Navy polo shirt on a hanger" width="800" height="436" loading="lazy"><span>Polos</span></button>
+        <button data-key="sweatshirt"><img src="assets/img/garment-sweatshirt-800.webp" alt="Grey sweatshirt on a hanger" width="800" height="436" loading="lazy"><span>Sweatshirts</span></button>
+        <button data-key="hoodie"><img src="assets/img/garment-hoodie-800.webp" alt="Black hoodie on a hanger" width="800" height="436" loading="lazy"><span>Hoodies</span></button>
+        <button data-key="joggers"><img src="assets/img/garment-joggers-800.webp" alt="Charcoal joggers on a clip hanger" width="800" height="436" loading="lazy"><span>Joggers</span></button>
         <button data-key="custom"><div class="blank-hanger"><svg viewBox="0 0 104 62" aria-hidden="true"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg></div><span>Your style</span></button>
       </div>
     </div>
@@ -60,7 +64,7 @@
       <div class="item-head"><h2>T-shirt <em>basic</em></h2><p class="muted">Single jersey, round neck, set-in sleeve. The garment every basics programme starts with, made in your weight, your fibre and your fit.</p>
         <div class="actions"><a class="btn solid" href="techpack.html?garment=tshirt" data-add="tshirt">Add to tech pack</a><a class="btn quiet" href="contact.html">Request a sample</a></div></div>
       <div class="item-body">
-        <div class="tabs"><button class="on" data-pane="spec">Specification</button><button data-pane="3d">Turn it</button><button data-pane="print">Print and embroidery</button></div>
+        <div class="tabs"><button class="on" data-pane="spec">Specification</button><button data-pane="photo">On the hanger</button><button data-pane="3d">Turn it</button><button data-pane="print">Print and embroidery</button></div>
         <div class="pane on" data-pane="spec"><table class="spec">
           <tr><td>Construction</td><td>Single jersey, round neck, rib neckband, set-in sleeve</td></tr>
           <tr><td>Composition</td><td>100% cotton as standard. Organic (GOTS, OCS) and recycled (RCS, GRS) blends with certificates</td></tr>
@@ -71,6 +75,7 @@
           <tr><td>Lead time</td><td>Quoted per order once fabric is confirmed</td></tr>
           <tr><td>Order types</td><td>CM, CMT, FOB</td></tr>
         </table></div>
+        <div class="pane" data-pane="photo"><img src="assets/img/garment-tshirt-1400.webp" alt="" width="1408" height="768" loading="lazy" style="width:100%;height:auto"><p class="mv-note">Sample photograph until the Silkstone shoot.</p></div>
         <div class="pane" data-pane="3d"><model-viewer src="assets/models/tshirt.glb" alt="3D model of a T-shirt" loading="lazy" camera-controls auto-rotate shadow-intensity="0.6" exposure="1" interaction-prompt="none"></model-viewer><p class="mv-note">Drag to turn. Illustrative model until Silkstone samples are scanned.</p></div>
         <div class="pane" data-pane="print"><table class="spec">
           <tr><td>Printing</td><td>Rotary, continuous, screen and transfer, in house</td></tr>
@@ -85,7 +90,7 @@
       <div class="item-head"><h2>Sweatshirt <em>basic</em></h2><p class="muted">Crew neck, rib cuffs and hem, in loopback or brushed fleece. Built to hold its shape through the wash.</p>
         <div class="actions"><a class="btn solid" href="techpack.html?garment=sweatshirt" data-add="sweatshirt">Add to tech pack</a><a class="btn quiet" href="contact.html">Request a sample</a></div></div>
       <div class="item-body">
-        <div class="tabs"><button class="on" data-pane="spec">Specification</button><button data-pane="3d">Turn it</button><button data-pane="print">Print and embroidery</button></div>
+        <div class="tabs"><button class="on" data-pane="spec">Specification</button><button data-pane="photo">On the hanger</button><button data-pane="3d">Turn it</button><button data-pane="print">Print and embroidery</button></div>
         <div class="pane on" data-pane="spec"><table class="spec">
           <tr><td>Construction</td><td>Crew neck, rib neckband with V-insert option, rib cuffs and hem, raglan or set-in sleeve</td></tr>
           <tr><td>Composition</td><td>Cotton or cotton and polyester fleece. Organic and recycled options with certificates</td></tr>
@@ -96,6 +101,7 @@
           <tr><td>Lead time</td><td>Quoted per order once fabric is confirmed</td></tr>
           <tr><td>Order types</td><td>CM, CMT, FOB</td></tr>
         </table></div>
+        <div class="pane" data-pane="photo"><img src="assets/img/garment-sweatshirt-1400.webp" alt="" width="1408" height="768" loading="lazy" style="width:100%;height:auto"><p class="mv-note">Sample photograph until the Silkstone shoot.</p></div>
         <div class="pane" data-pane="3d"><div class="blank tall"><span>3D model to follow<br>Sweatshirt basic</span></div></div>
         <div class="pane" data-pane="print"><table class="spec">
           <tr><td>Printing</td><td>Rotary, continuous, screen and transfer, in house</td></tr>
@@ -110,7 +116,7 @@
       <div class="item-head"><h2>Hoodie <em>basic</em></h2><p class="muted">Pullover hood with drawcord and kangaroo pocket, or full zip. Fleece weight and hood lining to your tech pack.</p>
         <div class="actions"><a class="btn solid" href="techpack.html?garment=hoodie" data-add="hoodie">Add to tech pack</a><a class="btn quiet" href="contact.html">Request a sample</a></div></div>
       <div class="item-body">
-        <div class="tabs"><button class="on" data-pane="spec">Specification</button><button data-pane="3d">Turn it</button><button data-pane="print">Print and embroidery</button></div>
+        <div class="tabs"><button class="on" data-pane="spec">Specification</button><button data-pane="photo">On the hanger</button><button data-pane="3d">Turn it</button><button data-pane="print">Print and embroidery</button></div>
         <div class="pane on" data-pane="spec"><table class="spec">
           <tr><td>Construction</td><td>Pullover or full zip, two-piece hood, drawcord with metal or plastic tips, kangaroo pocket, rib cuffs and hem</td></tr>
           <tr><td>Composition</td><td>Cotton or cotton and polyester fleece. Organic and recycled options with certificates</td></tr>
@@ -121,6 +127,7 @@
           <tr><td>Lead time</td><td>Quoted per order once fabric is confirmed</td></tr>
           <tr><td>Order types</td><td>CM, CMT, FOB</td></tr>
         </table></div>
+        <div class="pane" data-pane="photo"><img src="assets/img/garment-hoodie-1400.webp" alt="" width="1408" height="768" loading="lazy" style="width:100%;height:auto"><p class="mv-note">Sample photograph until the Silkstone shoot.</p></div>
         <div class="pane" data-pane="3d"><model-viewer src="assets/models/hoodie.glb" alt="3D model of a hoodie" loading="lazy" camera-controls auto-rotate shadow-intensity="0.6" exposure="1" interaction-prompt="none"></model-viewer><p class="mv-note">Drag to turn. Illustrative model until Silkstone samples are scanned.</p></div>
         <div class="pane" data-pane="print"><table class="spec">
           <tr><td>Printing</td><td>Rotary, continuous, screen and transfer, in house</td></tr>
@@ -131,10 +138,34 @@
       </div>
     </article>
 
-    <article class="item" data-key="pants" hidden>
-      <div class="item-head"><h2>Pants</h2><p class="muted">Knitted bottoms are made on the same floor. Styles, constructions and photographs are being added.</p>
-        <div class="actions"><a class="btn quiet" href="contact.html">Ask about pants</a></div></div>
-      <div class="item-body"><div class="blank wide"><span>Styles to follow<br>Joggers, shorts and knitted bottoms</span></div></div>
+    <article class="item" data-key="joggers" hidden>
+      <div class="item-head"><h2>Joggers <em>basic</em></h2><p class="muted">Fleece joggers with an elasticated drawcord waist, side pockets and ribbed cuffs. Shorts and other knitted bottoms on the same construction.</p>
+        <div class="actions"><a class="btn solid" href="techpack.html?garment=other" data-add="joggers">Add to tech pack</a><a class="btn quiet" href="contact.html">Request a sample</a></div></div>
+      <div class="item-body">
+        <div class="tabs"><button class="on" data-pane="spec">Specification</button><button data-pane="photo">On the hanger</button></div>
+        <div class="pane on" data-pane="spec"><table class="spec"><tr><td>Construction</td><td>Elasticated waist with drawcord, side seam pockets, ribbed cuffs, tapered or straight leg</td></tr><tr><td>Composition</td><td>Cotton or cotton and polyester fleece. Organic and recycled options with certificates</td></tr><tr><td>Weight</td><td>260 to 400 gsm, loopback or brushed</td></tr><tr><td>Sizes</td><td>XS to 3XL, graded to your size chart</td></tr><tr><td>Minimum</td><td>20,000 pieces per style. Trial order 10,000</td></tr><tr><td>Lead time</td><td>Quoted per order once fabric is confirmed</td></tr><tr><td>Order types</td><td>CM, CMT, FOB</td></tr></table></div>
+        <div class="pane" data-pane="photo"><img src="assets/img/garment-joggers-1400.webp" alt="" width="1408" height="768" loading="lazy" style="width:100%;height:auto"><p class="mv-note">Sample photograph. 3D model to follow.</p></div>
+      </div>
+    </article>
+
+    <article class="item" data-key="polo" hidden>
+      <div class="item-head"><h2>Polo <em>basic</em></h2><p class="muted">Pique polo with a ribbed collar, two or three button placket and ribbed sleeve cuffs.</p>
+        <div class="actions"><a class="btn solid" href="techpack.html?garment=polo" data-add="polo">Add to tech pack</a><a class="btn quiet" href="contact.html">Request a sample</a></div></div>
+      <div class="item-body">
+        <div class="tabs"><button class="on" data-pane="spec">Specification</button><button data-pane="photo">On the hanger</button></div>
+        <div class="pane on" data-pane="spec"><table class="spec"><tr><td>Construction</td><td>Pique knit, flat-knit ribbed collar and cuffs, placket with two or three buttons, side vents</td></tr><tr><td>Composition</td><td>100% cotton pique as standard. Organic and blended options with certificates</td></tr><tr><td>Weight</td><td>180 to 240 gsm</td></tr><tr><td>Sizes</td><td>XS to 3XL, graded to your size chart</td></tr><tr><td>Minimum</td><td>20,000 pieces per style. Trial order 10,000</td></tr><tr><td>Lead time</td><td>Quoted per order once fabric is confirmed</td></tr><tr><td>Order types</td><td>CM, CMT, FOB</td></tr></table></div>
+        <div class="pane" data-pane="photo"><img src="assets/img/garment-polo-1400.webp" alt="" width="1408" height="768" loading="lazy" style="width:100%;height:auto"><p class="mv-note">Sample photograph. 3D model to follow.</p></div>
+      </div>
+    </article>
+
+    <article class="item" data-key="longsleeve" hidden>
+      <div class="item-head"><h2>Long sleeve <em>T-shirt</em></h2><p class="muted">The T-shirt construction with full-length sleeves and ribbed cuffs.</p>
+        <div class="actions"><a class="btn solid" href="techpack.html?garment=longsleeve" data-add="longsleeve">Add to tech pack</a><a class="btn quiet" href="contact.html">Request a sample</a></div></div>
+      <div class="item-body">
+        <div class="tabs"><button class="on" data-pane="spec">Specification</button><button data-pane="photo">On the hanger</button></div>
+        <div class="pane on" data-pane="spec"><table class="spec"><tr><td>Construction</td><td>Single jersey, round neck, rib neckband, set-in long sleeve, ribbed cuffs</td></tr><tr><td>Composition</td><td>100% cotton as standard. Organic and recycled options with certificates</td></tr><tr><td>Weight</td><td>160 to 220 gsm</td></tr><tr><td>Sizes</td><td>XS to 3XL, graded to your size chart</td></tr><tr><td>Minimum</td><td>20,000 pieces per style. Trial order 10,000</td></tr><tr><td>Lead time</td><td>Quoted per order once fabric is confirmed</td></tr><tr><td>Order types</td><td>CM, CMT, FOB</td></tr></table></div>
+        <div class="pane" data-pane="photo"><img src="assets/img/garment-longsleeve-1400.webp" alt="" width="1408" height="768" loading="lazy" style="width:100%;height:auto"><p class="mv-note">Sample photograph. 3D model to follow.</p></div>
+      </div>
     </article>
 
     <article class="item" data-key="custom" hidden>
@@ -157,7 +188,7 @@
     <p class="muted">Every construction, specification table and photograph in one printable document, rebuilt to match this site. Until it is ready, ask and we send the current version.</p>
     <a class="link" href="contact.html">Request the catalogue</a>
   </div>
-  <div class="blank wide rv"><span>Catalogue cover to follow</span></div>
+  <figure class="fig rv shadowed"><img src="assets/img/catalogue-cover-1400.webp" srcset="assets/img/catalogue-cover-800.webp 800w, assets/img/catalogue-cover-1400.webp 1400w" sizes="(max-width:900px) 100vw, 50vw" alt="The catalogue beside a folded white T-shirt" width="1408" height="768" loading="lazy"></figure>
 </div></section>
 </main>
 
@@ -172,7 +203,7 @@
 </div></footer>
 
 <script src="assets/site.js?v=6"></script>
-<script type="module" src="assets/rail.js?v=15"></script>
+<script type="module" src="assets/rail.js?v=16"></script>
 <script>
 (function(){
   var host=document.getElementById('rail3d'), panel=document.getElementById('itemPanel');
