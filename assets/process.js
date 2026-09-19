@@ -5,33 +5,56 @@
   var stages = document.querySelectorAll('.pstage');
   if (!stages.length) return;
 
-  /* prepare every stroke: measure, hide, reveal by dashoffset */
-  stages.forEach(function (st) {
-    st.querySelectorAll('svg path, svg circle, svg line, svg polyline, svg rect').forEach(function (el) {
-      var len = 0; try { len = el.getTotalLength(); } catch (e) { len = 400; }
-      el.style.strokeDasharray = len; el.style.strokeDashoffset = reduce ? 0 : len;
-      el.dataset.len = len;
+  /* Traced drawings live in assets/draw and are fetched, so the page stays light.
+     Reveal: the outline is drawn by many pens at once (one dash per segment of the
+     path), then the ink fills in. Small hand-drawn strokes still draw end to end. */
+  var SEGS = 36;
+  function prepare(el) {
+    var len = 0; try { len = el.getTotalLength(); } catch (e) { len = 400; }
+    var traced = !!el.closest('.traced');
+    if (traced) { var seg = len / SEGS; el.style.strokeDasharray = seg + ' ' + seg; el.style.strokeDashoffset = reduce ? 0 : seg; el.dataset.seg = seg; }
+    else { el.style.strokeDasharray = len; el.style.strokeDashoffset = reduce ? 0 : len; }
+    el.dataset.len = len;
+  }
+  function reveal(st) {
+    var strokes = st.querySelectorAll('[data-len]');
+    var t = 0, longest = 0;
+    strokes.forEach(function (el) {
+      var traced = !!el.closest('.traced'); var len = parseFloat(el.dataset.len);
+      var dur = traced ? 2.6 : Math.min(1.4, 0.35 + len / 900);
+      el.style.transition = 'stroke-dashoffset ' + dur + 's cubic-bezier(.4,0,.2,1) ' + t.toFixed(2) + 's';
+      el.style.strokeDashoffset = 0;
+      longest = Math.max(longest, t + dur);
+      if (!traced) t += dur * 0.55;
     });
-  });
-
-  if (reduce) { stages.forEach(function (s) { s.classList.add('drawn'); }); return; }
-
+    setTimeout(function () { st.classList.add('text'); }, 600);
+    setTimeout(function () { st.classList.add('drawn'); }, Math.max(300, longest * 1000 - 200));
+  }
   var io = new IntersectionObserver(function (es) {
     es.forEach(function (e) {
       if (!e.isIntersecting) return;
-      var st = e.target; io.unobserve(st);
-      var strokes = st.querySelectorAll('[data-len]');
-      var t = 0;
-      strokes.forEach(function (el, i) {
-        var traced = !!el.closest('.traced'); var len = parseFloat(el.dataset.len), dur = traced ? Math.min(3.6, 1.6 + len / 12000) : Math.min(1.4, 0.35 + len / 900);
-        el.style.transition = 'stroke-dashoffset ' + dur + 's cubic-bezier(.22,1,.36,1) ' + t.toFixed(2) + 's';
-        el.style.strokeDashoffset = 0;
-        t += traced ? dur : dur * 0.55;
-      });
-      setTimeout(function () { st.classList.add('drawn'); }, Math.max(300, t * 1000 + 250));
+      io.unobserve(e.target);
+      var st = e.target.closest('.pstage') || e.target;
+      if (reduce) { st.classList.add('drawn'); return; }
+      reveal(st);
     });
-  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.2 });
-  stages.forEach(function (s) { io.observe(s); });
+  }, { threshold: 0.35 });
+  function ready(st) {
+    st.querySelectorAll('svg path, svg circle, svg line, svg polyline, svg rect').forEach(prepare);
+    var fig = st.querySelector('figure') || st;
+    if (reduce) { st.classList.add('drawn'); return; }
+    io.observe(fig);
+  }
+  stages.forEach(function (st) {
+    var lazy = st.querySelectorAll('svg[data-draw]');
+    if (!lazy.length) { ready(st); return; }
+    var waiting = lazy.length;
+    lazy.forEach(function (svg) {
+      fetch(svg.dataset.draw).then(function (r) { return r.text(); }).then(function (txt) {
+        var m = txt.match(/<path[^>]*?\/?>/); if (m) svg.innerHTML = m[0].replace(/\/?>$/, '/>');
+      }).catch(function () {}).then(function () { if (--waiting === 0) ready(st); });
+    });
+  });
 
   /* the thread between stages */
   var thread = document.querySelector('.pthread');
@@ -41,15 +64,15 @@
     function build() {
       var r = list.getBoundingClientRect();
       var pts = Array.prototype.map.call(stages, function (s) {
-        var a = s.querySelector('.anchor').getBoundingClientRect();
-        return { x: a.left + a.width / 2 - r.left, y: a.top + a.height / 2 - r.top };
+        var a = s.querySelector('figure').getBoundingClientRect();
+        return { x: a.left + a.width / 2 - r.left, top: a.top - r.top + 8, bottom: a.bottom - r.top - 8 };
       });
       thread.setAttribute('viewBox', '0 0 ' + r.width + ' ' + r.height);
       thread.style.width = r.width + 'px'; thread.style.height = r.height + 'px';
-      var d = 'M ' + pts[0].x + ' ' + pts[0].y;
+      var d = '';
       for (var i = 1; i < pts.length; i++) {
-        var a = pts[i - 1], b = pts[i], my = (a.y + b.y) / 2;
-        d += ' C ' + a.x + ' ' + my + ', ' + b.x + ' ' + my + ', ' + b.x + ' ' + b.y;
+        var a = pts[i - 1], b = pts[i], my = (a.bottom + b.top) / 2;
+        d += 'M ' + a.x + ' ' + a.bottom + ' C ' + a.x + ' ' + my + ', ' + b.x + ' ' + my + ', ' + b.x + ' ' + b.top + ' ';
       }
       path.setAttribute('d', d);
       var len = path.getTotalLength(); path.style.strokeDasharray = len; path.dataset.len = len; update();
