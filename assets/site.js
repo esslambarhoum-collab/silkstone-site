@@ -43,8 +43,21 @@
   } else { rv.forEach(function (el) { el.classList.add('in'); }); }
 
 
+  /* Expanding fill: the black blooms from where the pointer entered */
+  document.querySelectorAll('.btn').forEach(function (b) {
+    b.addEventListener('pointerenter', function (e) { var r = b.getBoundingClientRect(); b.style.setProperty('--fx', ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%'); b.style.setProperty('--fy', ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%'); });
+  });
+
+  /* Digit pop-in for figures */
+  document.querySelectorAll('.pop[data-count]').forEach(function (el) {
+    var txt = el.textContent; el.textContent = ''; el.classList.add('t-digit-group');
+    txt.split('').forEach(function (ch, i) { var d = document.createElement('span'); d.className = 't-digit'; d.textContent = ch; d.style.setProperty('--i', i); el.appendChild(d); });
+  });
+  var pops = document.querySelectorAll('.t-digit-group');
+  if (pops.length && 'IntersectionObserver' in window) { var pio = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-animating'); pio.unobserve(e.target); } }); }, { rootMargin: '0px 0px -10% 0px' }); pops.forEach(function (p) { pio.observe(p); }); }
+
   /* Count-up figures (data-count) */
-  var counters=document.querySelectorAll('[data-count]');
+  var counters=document.querySelectorAll('[data-count]:not(.pop)');
   if(counters.length){
     var fmt=function(n){return n.toLocaleString('en-GB');};
     var run=function(el){ if(el.dataset.done) return; el.dataset.done='1'; var end=parseInt(el.dataset.count,10); if(reduce||!end){el.textContent=fmt(end);return;} var t0=null,dur=1400; var step=function(t){ if(!t0)t0=t; var p=Math.min(1,(t-t0)/dur); p=1-Math.pow(1-p,3); el.textContent=fmt(Math.round(end*p)); if(p<1) requestAnimationFrame(step); }; requestAnimationFrame(step); };
@@ -185,7 +198,7 @@
     var idx = 0;
     function go(i) {
       idx = Math.max(0, Math.min(qs.length - 1, i));
-      qs.forEach(function (q, k) { q.classList.toggle('on', k === idx); });
+      qs.forEach(function (q, k) { var on = k === idx; if (on && !q.classList.contains('on')) { q.classList.add('enter'); setTimeout(function () { q.classList.remove('enter'); }, 500); } q.classList.toggle('on', on); });
       if (bar) bar.style.width = ((idx) / (qs.length - 1) * 100) + '%';
       var f = qs[idx].querySelector('.field'); if (f) setTimeout(function () { f.focus(); }, 50);
       if (qs[idx].dataset.q === 'summary') renderSummary();
@@ -196,7 +209,7 @@
       if (on) { answers[key] = on.dataset.v || on.textContent.trim(); return true; }
       var f = q.querySelector('.field');
       if (f) {
-        if (f.required && !f.value.trim()) { f.focus(); f.style.borderColor = '#B8262B'; setTimeout(function () { f.style.borderColor = ''; }, 900); return false; }
+        if (f.required && !f.value.trim()) { f.focus(); f.classList.add('t-shake'); setTimeout(function () { f.classList.remove('t-shake'); }, 500); return false; }
         answers[key] = f.value.trim(); return true;
       }
       return true;
@@ -224,6 +237,7 @@
         return '<div class="row"><div class="k">' + labels[k] + '</div><div class="v">' + esc(answers[k]) + '</div></div>';
       }).join('');
       var send = convo.querySelector('[data-send]');
+      if (send && !send.dataset.wired) { send.dataset.wired = '1'; send.addEventListener('click', function () { send.classList.add('sent'); }); }
       if (send) {
         var body = Object.keys(labels).filter(function (k) { return answers[k]; }).map(function (k) { return labels[k] + ': ' + answers[k]; }).join('\n');
         send.setAttribute('href', 'mailto:info@silkstone-textile.com?subject=' + encodeURIComponent('Enquiry from silkstone-textile.com: ' + (answers.need || '')) + '&body=' + encodeURIComponent(body + '\n\nSent from the Silkstone website.'));

@@ -23,12 +23,12 @@
       var strokes = st.querySelectorAll('[data-len]');
       var t = 0;
       strokes.forEach(function (el, i) {
-        var traced = !!el.closest('.traced'); var len = parseFloat(el.dataset.len), dur = traced ? Math.min(3.4, 1.2 + len / 9000) : Math.min(1.4, 0.35 + len / 900);
+        var traced = !!el.closest('.traced'); var len = parseFloat(el.dataset.len), dur = traced ? Math.min(3.6, 1.6 + len / 12000) : Math.min(1.4, 0.35 + len / 900);
         el.style.transition = 'stroke-dashoffset ' + dur + 's cubic-bezier(.22,1,.36,1) ' + t.toFixed(2) + 's';
         el.style.strokeDashoffset = 0;
-        t += dur * 0.55;
+        t += traced ? dur : dur * 0.55;
       });
-      setTimeout(function () { st.classList.add('drawn'); }, 200);
+      setTimeout(function () { st.classList.add('drawn'); }, Math.max(300, t * 1000 + 250));
     });
   }, { rootMargin: '0px 0px -12% 0px', threshold: 0.2 });
   stages.forEach(function (s) { io.observe(s); });
