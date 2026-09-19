@@ -199,7 +199,7 @@
     function go(i) {
       idx = Math.max(0, Math.min(qs.length - 1, i));
       qs.forEach(function (q, k) { var on = k === idx; if (on && !q.classList.contains('on')) { q.classList.add('enter'); setTimeout(function () { q.classList.remove('enter'); }, 500); } q.classList.toggle('on', on); });
-      if (bar) bar.style.width = ((idx) / (qs.length - 1) * 100) + '%';
+      if (bar) bar.style.transform = 'scaleX(' + ((idx) / (qs.length - 1)).toFixed(3) + ')';
       var f = qs[idx].querySelector('.field'); if (f) setTimeout(function () { f.focus(); }, 50);
       if (qs[idx].dataset.q === 'summary') renderSummary();
     }
