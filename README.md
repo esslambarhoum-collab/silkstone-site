@@ -1,39 +1,42 @@
-# Silkstone Fashion website
+# Silkstone Fashion — website
 
-Static site, no build step. Plain HTML, one stylesheet, one script.
+Knitwear manufacturing in Egypt, for European and American retail. A Boldbridge Capital and Aletex Group partnership.
 
-## Run locally
+Static site: plain HTML, one stylesheet, a few small scripts. No build step.
 
-```bash
+## Preview
+
+```
 node serve.js
 ```
 
-Then open http://localhost:4173. The server also returns 404.html for missing pages. Opening the HTML files directly from disk works for everything except the 3D models, which need a server.
+Then open http://localhost:4173. Any static server works; the site is just files.
 
-## Structure
+## Pages
 
-- `index.html`, `about.html`, `capabilities.html`, `products.html`, `quality.html`, `traced-order.html`, `egypt.html`, `techpack.html`, `contact.html`, `404.html`
-- `assets/styles.css` design tokens, components, print styles for the tech pack
-- `assets/site.js` loader, nav, reveal, stitched process line, wardrobe, department tabs, contact conversation
-- `assets/img/` photographs. Garment and location images are generated placeholders until the shoot. `world.svg` is a public-domain low-resolution map from Wikimedia Commons.
-- `assets/logos/` Silkstone (`silkstone.svg` traced from the JPEG, transparent), partner, client and certification logos
-- `assets/models/` compressed GLB models for the 3D viewer
-- `robots.txt`, `sitemap.xml`, `llms.txt` for search and AI crawlers
+| File | Page |
+|---|---|
+| `index.html` | Landing |
+| `about.html` | The two partners and the owner |
+| `capabilities.html` | The seven stages, drawn; the floor plan; CM / CMT / FOB |
+| `products.html` | The wardrobe: garments on a rail, spec, photo, 3D where a model exists |
+| `quality.html` | Three inspections on the garment; the certificate wall |
+| `traced-order.html` | One order followed from roll to carton |
+| `egypt.html` | Routes, buyer's clocks, duty-free access, cotton |
+| `techpack.html` | Tech pack generator, seven steps, print to A4 or send by email |
+| `contact.html` | Three-step brief with a live sheet |
+| `legal.html`, `404.html` | Legal and not-found |
 
-## Design
+## Assets
 
-Greys only: white, bone `#F3F1EC` as the ground, ash `#9B978F`, graphite `#4A4844`, black `#151513`. Sand `#E9E3D8` appears only as an occasional background. Type is Zen Kaku Gothic New 300, 400 and 500 from Google Fonts. Depth comes from one soft shadow on objects that hang, and from photographs. No cards, no pills, no accent colour.
+- `assets/styles.css` — all tokens and components. Palette: white, bone, ash, graphite, black; sand only as a background tint. Type: Archivo Black, Bodoni Moda italic, Archivo 300.
+- `assets/site.js` — navigation, reveal on scroll, buttons, figures.
+- `assets/process.js` — the drawings that draw themselves, the thread, the floor plan.
+- `assets/draw/` — traced line drawings (SVG), fetched by `process.js`.
+- `assets/img/` — photographs in WebP at 800 / 1400 / 2000 widths.
+- `assets/models/` — GLB models for the 3D tab (T-shirt, hoodie so far).
+- `assets/rail.js` — the WebGL rail, kept for when garment-on-hanger models exist. Not loaded.
 
-## Content rules
+## Still to come
 
-- Only confirmed facts. Unconfirmed values read "to confirm" or "on request".
-- No generated factory or people images. Placeholders stay until real photographs exist.
-- Client logos appear only with the brand's permission. Certificate numbers are shown on request until the PDFs are collected.
-
-## Open items
-
-- Contact and tech pack forms send by `mailto:`. A form backend (Formspree, Web3Forms or similar) should replace this before launch.
-- WhatsApp number, certificate numbers, Ziad's portrait, team section, factory photography and film.
-- Sweatshirt 3D model.
-- Company profile and product catalogue PDFs, rebuilt to this design.
-- The ISO badges in `assets/logos` are generic and should be replaced by the certification body's mark.
+Real factory photographs and film, the owner's portrait, certificate numbers, a WhatsApp number, legal entity details, 3D models for the long sleeve, polo, sweatshirt and joggers.
