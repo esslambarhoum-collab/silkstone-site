@@ -400,7 +400,7 @@ footer .bottom a{display:inline;padding:0}
 .rail-scroller button{flex:0 0 78%;scroll-snap-align:start;background:var(--white);border:1px solid var(--line);padding:0 0 14px;text-align:center;font:inherit;color:var(--graphite);font-size:12px;letter-spacing:.16em;text-transform:uppercase}
 .rail-scroller button.on{border-color:var(--black);color:var(--black)}
 .rail-scroller img{width:100%;height:auto;display:block;margin-bottom:12px}
-.blank-hanger{aspect-ratio:800/436;display:grid;place-items:center;margin-bottom:12px;background:repeating-linear-gradient(135deg,transparent 0 22px,rgba(21,21,19,.035) 22px 23px)}
+.blank-hanger{aspect-ratio:800/523;display:grid;place-items:center;margin-bottom:12px;background:repeating-linear-gradient(135deg,transparent 0 22px,rgba(21,21,19,.035) 22px 23px)}
 .blank-hanger svg{width:34%;overflow:visible}
 .blank-hanger path{fill:none;stroke:var(--black);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
 .blank{display:grid;place-items:center;text-align:center;color:var(--ash);font-size:13px;letter-spacing:.04em;line-height:1.7;padding:24px;background:var(--white);border:1px solid var(--line);background-image:repeating-linear-gradient(135deg,transparent 0 22px,rgba(21,21,19,.035) 22px 23px)}
