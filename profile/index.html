@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silkstone Fashion · Company profile 2026</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="../assets/logos/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@300;400;500&family=Bodoni+Moda:ital,opsz,wght@1,6..96,400;1,6..96,500&display=swap" rel="stylesheet">
+<style>
+:root{--white:#FFFFFF;--bone:#F3F1EC;--sand:#E9E3D8;--ash:#6F6B63;--graphite:#4A4844;--black:#151513;--line:rgba(21,21,19,.14);--line-strong:rgba(21,21,19,.4);
+  --font:"Archivo",system-ui,sans-serif;--stone:"Archivo Black","Archivo",sans-serif;--silk:"Bodoni Moda","Didot",Georgia,serif;--m:16mm}
+*{box-sizing:border-box}
+html,body{margin:0;background:#dedbd4;color:var(--black);font-family:var(--font);font-weight:300;font-size:10.5pt;line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{width:297mm;height:210mm;position:relative;overflow:hidden;background:var(--bone);margin:8mm auto;page-break-after:always;break-after:page;padding:var(--m)}
+.page.white{background:var(--white)}
+.page.dark{background:radial-gradient(120% 140% at 20% 0%,#2E2C28 0%,#1B1A17 55%,#151513 100%);color:var(--bone)}
+@media print{html,body{background:#fff}.page{margin:0;box-shadow:none}@page{size:A4 landscape;margin:0}}
+@media screen{.page{box-shadow:0 30px 70px rgba(21,21,19,.12),0 2px 6px rgba(21,21,19,.06)}}
+h1,h2,h3{font-family:var(--stone);font-weight:400;margin:0;letter-spacing:-.02em;line-height:1.02}
+h1{font-size:46pt;line-height:.98}
+h2{font-size:28pt}
+h3{font-size:13pt}
+em,.silk{font-family:var(--silk);font-style:italic;font-weight:400;font-variation-settings:"opsz" 72;letter-spacing:0;color:var(--graphite)}
+h1 em,h2 em{font-size:1.06em}
+.dark em,.dark .silk{color:var(--bone)}
+p{margin:0 0 .9em;max-width:62ch}
+.lead{font-size:12.5pt;line-height:1.55;color:var(--graphite);max-width:50ch}
+.muted{color:var(--graphite)}
+.small{font-size:8.5pt;color:var(--ash);line-height:1.5}
+.label{font-size:7.5pt;letter-spacing:.3em;text-transform:uppercase;color:var(--ash);font-weight:400}
+.dark .label,.dark .small{color:#B4AFA3}
+.dark p{color:#D9D5CC}
+/* running head and foot */
+.head{position:absolute;left:var(--m);right:var(--m);top:9mm;display:flex;justify-content:space-between;align-items:center;font-size:7.5pt;letter-spacing:.24em;text-transform:uppercase;color:var(--ash)}
+.head .brand{display:flex;align-items:center;gap:8px;letter-spacing:.34em}
+.head .brand svg{width:22px;height:auto;overflow:visible}
+.head .brand svg path{fill:none;stroke:currentColor;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.dark .head{color:#B4AFA3}
+.foot{position:absolute;left:var(--m);right:var(--m);bottom:8mm;display:flex;justify-content:space-between;font-size:7.5pt;letter-spacing:.06em;color:var(--ash);border-top:1px solid var(--line);padding-top:6px}
+.dark .foot{color:#B4AFA3;border-color:rgba(243,241,236,.2)}
+.n{font-family:var(--silk);font-style:italic;font-size:11pt;color:var(--ash);display:block;margin-bottom:8px}
+.body{position:absolute;left:var(--m);right:var(--m);top:24mm;bottom:20mm}
+/* grids */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14mm;height:100%}
+.two.narrow{grid-template-columns:1.1fr .9fr}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:10mm}
+.four{display:grid;grid-template-columns:repeat(4,1fr);gap:8mm}
+.fig{margin:0;height:100%;display:flex;flex-direction:column}
+.fig img{width:100%;flex:1;min-height:0;object-fit:cover;display:block}
+.fig figcaption{font-size:8pt;color:var(--ash);margin-top:6px}
+.blank{display:grid;place-items:center;text-align:center;color:var(--ash);font-size:8.5pt;letter-spacing:.04em;line-height:1.6;background:var(--white);border:1px solid var(--line);background-image:repeating-linear-gradient(135deg,transparent 0 22px,rgba(21,21,19,.035) 22px 23px)}
+.rows{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:34% 1fr;gap:8mm;padding:7px 0;border-bottom:1px solid var(--line);font-size:9.5pt}
+.row .k{color:var(--ash);font-size:8.5pt;letter-spacing:.04em;padding-top:1px}
+.dash{list-style:none;padding:0;margin:0}
+.dash li{position:relative;padding:6px 0 6px 20px;border-bottom:1px solid var(--line);color:var(--graphite);font-size:9.5pt}
+.dash li::before{content:"";position:absolute;left:0;top:15px;width:11px;height:1px;background:var(--black)}
+.dash li b{color:var(--black);font-weight:400}
+/* cover */
+.cover{background:var(--bone) url(../assets/img/limestone-2000.webp) center/cover no-repeat}
+.cover::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(243,241,236,.82),rgba(243,241,236,.7) 50%,rgba(243,241,236,.92))}
+.cover .in{position:relative;height:100%;display:flex;flex-direction:column;justify-content:space-between}
+.cover .brand{display:flex;align-items:center;gap:12px;font-size:10pt;letter-spacing:.34em}
+.cover .brand svg{width:40px;overflow:visible}
+.cover .brand svg path{fill:none;stroke:currentColor;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.cover h1{max-width:18ch;font-size:44pt}
+.cover .silk{display:block;font-size:22pt;margin-top:10px;color:var(--black)}
+.cover .meta{display:flex;justify-content:space-between;align-items:flex-end;font-size:8pt;letter-spacing:.24em;text-transform:uppercase;color:var(--graphite)}
+/* figures slab */
+.figs{display:grid;grid-template-columns:repeat(4,1fr);gap:10mm;align-items:start}
+.figs b{display:block;font-family:var(--stone);font-weight:400;font-size:52pt;line-height:1;color:var(--white);letter-spacing:-.03em}
+.figs i{display:block;font-family:var(--silk);font-size:14pt;color:var(--bone);margin-top:6px}
+.figs small{display:block;color:#B4AFA3;font-size:8.5pt;margin-top:6px;line-height:1.5}
+/* partners */
+.partner .plogo{height:26mm;display:flex;align-items:center;margin-bottom:8mm}
+.partner .plogo img{height:22mm;width:auto}
+.partner .plogo .darkbox{background:var(--black);height:22mm;display:flex;align-items:center;padding:0 18px}
+.partner .plogo .darkbox img{height:auto;width:30mm}
+/* stages */
+.stages{display:grid;grid-template-columns:repeat(4,1fr);gap:8mm 8mm;height:100%;align-content:start}
+.stage img{width:100%;height:30mm;object-fit:contain;display:block;margin-bottom:5px}
+.stage h3{font-size:11.5pt;margin-bottom:4px}
+.stage p{font-size:8.6pt;color:var(--graphite);line-height:1.5;margin:0}
+.stage .num{font-family:var(--silk);font-style:italic;color:var(--ash);font-size:10pt}
+/* plan */
+.plan{width:100%;height:auto;display:block}
+.plan .shell{fill:none;stroke:var(--black);stroke-width:1.2}
+.plan rect.r{fill:var(--white);stroke:var(--line-strong);stroke-width:1}
+.plan text{font-size:15px;fill:var(--black);text-anchor:middle;font-family:var(--font);font-weight:400}
+.plan text.sub{font-size:10px;fill:var(--ash)}
+.plan .lines line{stroke:var(--line);stroke-width:1}
+/* certificates */
+.frames{display:grid;grid-template-columns:repeat(5,1fr);gap:6mm}
+.frame{background:var(--white);border:1px solid var(--black);padding:6px;text-align:center;box-shadow:0 10px 24px rgba(21,21,19,.08)}
+.frame .mat{border:1px solid var(--line);aspect-ratio:4/3;display:grid;place-items:center;padding:10px}
+.frame .mat img{max-height:14mm;max-width:70%;filter:grayscale(1);opacity:.85}
+.frame b{display:block;font-family:var(--stone);font-weight:400;font-size:9pt;margin:8px 0 2px}
+.frame span{display:block;font-size:7.5pt;color:var(--graphite);line-height:1.4;padding:0 4px}
+/* wardrobe */
+.rail{position:relative;background:var(--white);border:1px solid var(--line);padding:0}
+.rail .steel{position:absolute;left:0;right:0;top:6mm;height:5px;background:linear-gradient(180deg,#8f8b84,#c9c5bd 45%,#6f6b63);border-radius:3px;z-index:2}
+.rail .strip{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.wardrobe{display:grid;grid-template-columns:1fr 1.05fr;grid-template-rows:1fr 1fr;gap:6mm 10mm;height:100%}
+.wardrobe>div:first-child{grid-row:1/span 2}
+.rail .strip div{text-align:center;font-size:7.5pt;letter-spacing:.2em;text-transform:uppercase;color:var(--graphite);padding-bottom:8px}
+.rail .strip img{width:100%;height:56mm;object-fit:cover;object-position:50% 0;display:block;margin-bottom:6px}
+.specs{display:grid;grid-template-columns:repeat(3,1fr);gap:6mm 10mm;margin-top:8mm}
+.spec h3{font-size:11pt;margin-bottom:3px}
+.spec p{font-size:8.6pt;color:var(--graphite);line-height:1.5;margin:0}
+/* map */
+.routemap{position:relative;background:var(--white);border:1px solid var(--line);padding:3mm;height:84mm}
+.routemap .crop{position:relative;overflow:hidden;height:100%}
+.routemap .inner{position:absolute;width:237%;left:-55%;top:-34%}
+.routemap .inner img{width:100%;opacity:.22;filter:grayscale(1);display:block}
+.routes{position:absolute;inset:0;width:100%;height:100%}
+.routes path{fill:none;stroke:var(--black);stroke-width:1.2;stroke-dasharray:4 4}
+.routes circle{fill:var(--black)}
+.routes text{font-size:7.5px;fill:var(--graphite);font-family:var(--font)}
+.routes .home text{font-size:8px;fill:var(--black);font-weight:500}
+.routes .home .ring{fill:none;stroke:var(--black);stroke-width:1;opacity:.5}
+.stamps{display:flex;gap:8mm;margin-top:6mm}
+.stamp{width:30mm;aspect-ratio:1;border:1px solid var(--black);border-radius:50%;display:grid;place-content:center;text-align:center;padding:8px;box-shadow:inset 0 0 0 3px var(--white),inset 0 0 0 4px var(--black);background:var(--white)}
+.stamp b{font-family:var(--stone);font-weight:400;font-size:15pt;display:block;line-height:1}
+.stamp span{display:block;font-family:var(--silk);font-style:italic;font-size:9.5pt;color:var(--graphite);margin-top:2px}
+.stamp small{display:block;font-size:6.5pt;letter-spacing:.06em;text-transform:uppercase;color:var(--ash);margin-top:4px;line-height:1.3}
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:14mm;height:100%}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:6mm 10mm;margin:0}
+.facts dt{font-size:7.5pt;letter-spacing:.2em;text-transform:uppercase;color:var(--ash);margin-bottom:3px}
+.facts dd{margin:0;font-size:10pt}
+.dark .facts dt{color:#B4AFA3}
+.dark .facts dd{color:var(--bone)}
+</style>
+</head>
+<body>
+
+<!-- 1 · Cover -->
+<section class="page cover">
+  <div class="in">
+    <div class="brand"><svg viewBox="0 0 104 62" aria-hidden="true"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg>SILKSTONE</div>
+    <div>
+      <h1>Knitwear made in Egypt for European and American retail.</h1>
+      <span class="silk">Soft to the hand. Held to a standard.</span>
+    </div>
+    <div class="meta"><span>Company profile · 2026</span><span>A Boldbridge Capital and Aletex Group partnership</span></div>
+  </div>
+</section>
+
+<!-- 2 · Who we are, in four figures -->
+<section class="page dark">
+  <div class="head"><span class="brand"><svg viewBox="0 0 104 62" aria-hidden="true"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg>SILKSTONE</span><span>Company profile 2026</span></div>
+  <div class="body">
+    <span class="n">01 · Who we are</span>
+    <h2>Silk is the garment. <em>Stone is the factory.</em></h2>
+    <p class="lead" style="color:#D9D5CC;margin-top:6mm">Silkstone Fashion is a knitwear manufacturer in Egypt, owned equally by Boldbridge Capital and Aletex Group. The product is soft, finished and easy to handle. The operation behind it is fixed, measured and does not move: fabric inspected, cut, sewn, printed and packed under one roof, with every order recorded from roll to carton.</p>
+    <div class="figs" style="position:absolute;left:0;right:0;bottom:6mm">
+      <div><b>16</b><i>active lines</i><small>33 at full capacity</small></div>
+      <div><b>3</b><i>markets duty free</i><small>EU, UK and United States</small></div>
+      <div><b>9</b><i>certificates held</i><small>WRAP, Sedex, ISO 9001, 14001, 45001, GOTS, OCS, RCS, GRS</small></div>
+      <div><b>1</b><i>roof</i><small>Fabric to carton, nothing subcontracted</small></div>
+    </div>
+  </div>
+  <div class="foot"><span>Plot No. 236, 6 Million Area, Southern Industrial Zone, 10th of Ramadan City, Egypt · info@silkstone-textile.com</span><span>2</span></div>
+</section>
+
+<!-- 3 · Two partners -->
+<section class="page white">
+  <div class="head"><span class="brand"><svg viewBox="0 0 104 62" aria-hidden="true"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg>SILKSTONE</span><span>Company profile 2026</span></div>
+  <div class="body">
+    <span class="n">02 · Ownership</span>
+    <h2>Two partners. <em>One factory.</em></h2>
+    <p class="lead" style="margin-top:4mm">Discipline from Barcelona, depth from Egypt, under one roof. Silkstone is owned 50% by Boldbridge Capital and 50% by Aletex Group, and run day to day by its owner from the production floor.</p>
+    <div class="two" style="height:auto;margin-top:10mm">
+      <article class="partner">
+        <div class="plogo"><img src="../assets/logos/boldbridge.jpg" alt="Boldbridge Capital"></div>
+        <h3>Boldbridge Capital</h3>
+        <p class="muted" style="margin-top:4px">A UK-headquartered group founded in 2005, operating in Egypt, Saudi Arabia and the United Arab Emirates, across fibre optic cable and precast concrete manufacturing, infrastructure and engineering, smart city development and strategic investment. Led by Hany Naeem, a Forbes Business Council member with twenty-five years building infrastructure across the Middle East and Africa.</p>
+        <span class="small">boldbridge.co.uk</span>
+      </article>
+      <article class="partner">
+        <div class="plogo"><span class="darkbox"><img src="../assets/logos/aletex-white.png" alt="Aletex Group"></span></div>
+        <h3>Aletex Group</h3>
+        <p class="muted" style="margin-top:4px">A circular knitwear group based in Canet de Mar, Barcelona, founded in 2008, designing and producing knitted collections for global fashion brands from trend research to the finished product. Its clients include Zara, Bershka, Pull&amp;Bear, Massimo Dutti, H&amp;M, Urban Outfitters and Anthropologie. Aletex gives Silkstone its European buying discipline and its route into Spanish retail.</p>
+        <span class="small">aletex.net</span>
+      </article>
+    </div>
+  </div>
+  <div class="foot"><span>Plot No. 236, 6 Million Area, Southern Industrial Zone, 10th of Ramadan City, Egypt · info@silkstone-textile.com</span><span>3</span></div>
+</section>
+
+<!-- 4 · The floor: seven stages -->
+<section class="page">
+  <div class="head"><span class="brand"><svg viewBox="0 0 104 62" aria-hidden="true"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg>SILKSTONE</span><span>Company profile 2026</span></div>
+  <div class="body">
+    <span class="n">03 · Capabilities</span>
+    <h2 style="margin-bottom:8mm">Fabric in. <em>Garments out.</em></h2>
+    <div class="stages">
+      <div class="stage"><img src="../assets/draw/rolls.svg" alt=""><span class="num">01</span><h3>Fabric sourcing</h3><p>Yarn and knitted fabric from Egyptian mills and partner mills abroad, through Aletex when the buyer prefers. Country of origin declared for all cotton. Better Cotton, organic and recycled yarn with transaction certificates.</p></div>
+      <div class="stage"><img src="../assets/draw/inspection.svg" alt=""><span class="num">02</span><h3>Fabric inspection</h3><p>Every incoming roll runs through the inspection machine. Defects, shade and weight are recorded against the roll number before it is released to the floor.</p></div>
+      <div class="stage"><img src="../assets/draw/cutting.svg" alt=""><span class="num">03</span><h3>Computerised cutting</h3><p>Digital markers, automatic cutting heads, every lay logged with plies and consumption. Each cut bundle carries the lay number so any garment traces back to its rolls.</p></div>
+      <div class="stage"><img src="../assets/draw/sewing.svg" alt=""><span class="num">04</span><h3>Sewing, sixteen lines</h3><p>Sixteen lines running, thirty-three at full capacity. Each style has a full operation breakdown before the first piece is sewn; hourly output by operation goes straight into the ERP.</p></div>
+      <div class="stage"><img src="../assets/draw/trims.svg" alt=""><span class="num">05</span><h3>Trims and labels</h3><p>Neck labels, care labels, drawcords, eyelets, snaps, buttons and zips, sourced to the tech pack and pull-tested per batch.</p></div>
+      <div class="stage"><img src="../assets/draw/print.svg" alt=""><span class="num">06</span><h3>Print and embroidery</h3><p>Rotary and continuous printing, screen and transfer work, and an embroidery department, all beside the sewing floor.</p></div>
+      <div class="stage"><img src="../assets/draw/packing.svg" alt=""><span class="num">07</span><h3>Packing and dispatch</h3><p>Final random inspection to the buyer's AQL, every garment through a calibrated metal detector, then folded, bagged, labelled and packed to the carton ratio. Cartons scanned at sealing and at loading.</p></div>
+      <div class="stage"><div class="blank" style="height:30mm;margin-bottom:5px"><span>Photograph to follow<br>Production floor</span></div><span class="num">&nbsp;</span><h3>Nothing subcontracted</h3><p>Every stage above is inside one building under our own supervision, so nothing is untracked and no part of the order is an invoice from a third party.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span>Plot No. 236, 6 Million Area, Southern Industrial Zone, 10th of Ramadan City, Egypt · info@silkstone-textile.com</span><span>4</span></div>
+</section>
+
+<!-- 5 · What is on the floor -->
+<section class="page white">
+  <div class="head"><span class="brand"><svg viewBox="0 0 104 62" aria-hidden="true"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg>SILKSTONE</span><span>Company profile 2026</span></div>
+  <div class="body">
+    <span class="n">04 · Equipment and records</span>
+    <div class="two narrow">
+      <div>
+        <h2 style="margin-bottom:6mm">What is <em>on the floor.</em></h2>
+        <svg class="plan" viewBox="0 0 900 420" aria-label="Simplified floor plan">
+          <rect x="10" y="10" width="880" height="400" class="shell"/>
+          <g><rect class="r" x="30" y="30" width="200" height="120"/><text x="130" y="86">Fabric intake</text><text x="130" y="106" class="sub">Inspection</text></g>
+          <g><rect class="r" x="250" y="30" width="200" height="120"/><text x="350" y="86">Cutting</text><text x="350" y="106" class="sub">Auto-cutting line</text></g>
+          <g><rect class="r" x="470" y="30" width="200" height="120"/><text x="570" y="86">Print</text><text x="570" y="106" class="sub">Embroidery</text></g>
+          <g><rect class="r" x="690" y="30" width="180" height="120"/><text x="780" y="86">Sample room</text><text x="780" y="106" class="sub">Development</text></g>
+          <g><rect class="r" x="30" y="170" width="640" height="220"/><text x="350" y="272">Sewing</text><text x="350" y="294" class="sub">16 lines active · 33 at capacity</text>
+            <g class="lines"><line x1="60" y1="200" x2="640" y2="200"/><line x1="60" y1="222" x2="640" y2="222"/><line x1="60" y1="244" x2="640" y2="244"/><line x1="60" y1="318" x2="640" y2="318"/><line x1="60" y1="340" x2="640" y2="340"/><line x1="60" y1="362" x2="640" y2="362"/></g></g>
+          <g><rect class="r" x="690" y="170" width="180" height="100"/><text x="780" y="214">Final QC</text><text x="780" y="234" class="sub">Metal detection</text></g>
+          <g><rect class="r" x="690" y="290" width="180" height="100"/><text x="780" y="334">Packing</text><text x="780" y="354" class="sub">Dispatch</text></g>
+        </svg>
+        <p class="small" style="margin-top:6px">Schematic layout, not to scale.</p>
+      </div>
+      <div>
+        <div class="rows" style="margin-top:2mm">
+          <div class="row"><div class="k">Fabric intake</div><div>Fabric inspection machine, 100% of rolls. Records: roll number, mill lot, width, GSM, defect points, result.</div></div>
+          <div class="row"><div class="k">Cutting</div><div>Computerised auto-cutting line with digital markers. Records: lay number, marker, plies, pieces, consumption, rolls used.</div></div>
+          <div class="row"><div class="k">Print and embroidery</div><div>Rotary and continuous printing, screen and transfer, embroidery heads. Records: run reference, colours, wash and crock tests.</div></div>
+          <div class="row"><div class="k">Sample room</div><div>Dedicated development department for proto, fit, pre-production and shipment samples. Records: stage, comments, approval.</div></div>
+          <div class="row"><div class="k">Sewing</div><div>Sixteen active lines, thirty-three at full capacity, in-line inspection inside each line. Records: hourly output by operation, efficiency, faults with corrective action.</div></div>
+          <div class="row"><div class="k">Final QC</div><div>Final random inspection to AQL, calibrated metal detector, broken needle policy, button and snap pull tester. Records: lot, sample size, defects by class, result.</div></div>
+          <div class="row"><div class="k">Packing</div><div>Folding, bagging, size stickers, carton ratios, scanning at sealing and loading. Records: carton number, size ratio, pieces, weight, lots, status.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Plot No. 236, 6 Million Area, Southern Industrial Zone, 10th of Ramadan City, Egypt · info@silkstone-textile.com</span><span>5</span></div>
+</section>
+
+<!-- 6 · Quality -->
+<section class="page">
+  <div class="head"><span class="brand"><svg viewBox="0 0 104 62" aria-hidden="true"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg>SILKSTONE</span><span>Company profile 2026</span></div>
+  <div class="body">
+    <span class="n">05 · Quality and product safety</span>
+    <div class="two narrow">
+      <div>
+        <h2>Checked three times. <em>Written down every time.</em></h2>
+        <p class="lead" style="margin-top:4mm">Quality is a digitally managed system with a zero defects policy, audited to the standards our buyers ask for.</p>
+        <div class="three" style="margin-top:6mm;gap:6mm">
+          <div><span class="silk" style="font-size:11pt">Before cutting</span><h3 style="margin:4px 0">Fabric inspection</h3><p class="small" style="color:var(--graphite);font-size:9pt">Every roll through the inspection machine. Defects, shade and weight recorded against the roll number and mill lot.</p></div>
+          <div><span class="silk" style="font-size:11pt">During sewing</span><h3 style="margin:4px 0">In-line inspection</h3><p class="small" style="color:var(--graphite);font-size:9pt">Checks inside each line while the garment is built, recorded by operation with the inspector's name and the corrective action.</p></div>
+          <div><span class="silk" style="font-size:11pt">After packing</span><h3 style="margin:4px 0">Final inspection</h3><p class="small" style="color:var(--graphite);font-size:9pt">Inspected to the buyer's AQL, then every piece through a calibrated metal detector in a secured zone before the carton is sealed.</p></div>
+        </div>
+        <ul class="dash" style="margin-top:6mm">
+          <li><b>Needles.</b> Every broken needle logged, every fragment recovered and matched before a replacement is issued.</li>
+          <li><b>Metal.</b> A calibrated metal detector checks every garment inside a secured zone before packing.</li>
+          <li><b>Pull tests.</b> Buttons, snaps and drawcord tips tested per batch for durability and child safety.</li>
+          <li><b>Chemicals.</b> No hazardous chemicals in stain removal or processing; restricted substance lists followed.</li>
+          <li><b>The ERP.</b> In-line and final results recorded against order, line and operation. Buyers see quality reports as they are produced, and every carton traces back to its rolls.</li>
+        </ul>
+      </div>
+      <div class="two" style="grid-template-columns:1fr;gap:6mm">
+        <div class="blank"><span>Photograph to follow<br>Fabric inspection machine</span></div>
+        <div class="blank"><span>Photograph to follow<br>Metal detector at packing</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Plot No. 236, 6 Million Area, Southern Industrial Zone, 10th of Ramadan City, Egypt · info@silkstone-textile.com</span><span>6</span></div>
+</section>
+
+<!-- 7 · Certificates -->
+<section class="page white">
+  <div class="head"><span class="brand"><svg viewBox="0 0 104 62" aria-hidden="true"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg>SILKSTONE</span><span>Company profile 2026</span></div>
+  <div class="body">
+    <span class="n">06 · Certifications and compliance</span>
+    <h2>The wall of <em>certificates.</em></h2>
+    <p class="lead" style="margin-top:3mm">Nine standards held by Silkstone. Certificate numbers and copies go to buyers on request. Buyers with their own programmes, including Higg FEM, Better Cotton and brand codes of conduct, are supported.</p>
+    <div class="frames" style="margin-top:8mm">
+      <div class="frame"><div class="mat"><img src="../assets/logos/wrap.webp" alt="WRAP"></div><b>WRAP</b><span>Worldwide Responsible Accredited Production</span></div>
+      <div class="frame"><div class="mat"><img src="../assets/logos/sedex.webp" alt="Sedex"></div><b>Sedex, SMETA</b><span>Social audit: labour, health and safety, environment, ethics</span></div>
+      <div class="frame"><div class="mat"><img src="../assets/logos/iso9001.webp" alt="ISO 9001"></div><b>ISO 9001</b><span>Quality management</span></div>
+      <div class="frame"><div class="mat"><img src="../assets/logos/iso14001.jpg" alt="ISO 14001"></div><b>ISO 14001</b><span>Environmental management</span></div>
+      <div class="frame"><div class="mat"><img src="../assets/logos/iso45001.jpg" alt="ISO 45001"></div><b>ISO 45001</b><span>Occupational health and safety</span></div>
+      <div class="frame"><div class="mat"><img src="../assets/logos/gots.jpg" alt="GOTS"></div><b>GOTS</b><span>Global Organic Textile Standard</span></div>
+      <div class="frame"><div class="mat"><img src="../assets/logos/ocs.png" alt="OCS"></div><b>OCS</b><span>Organic Content Standard</span></div>
+      <div class="frame"><div class="mat"><img src="../assets/logos/rcs.webp" alt="RCS"></div><b>RCS</b><span>Recycled Claim Standard</span></div>
+      <div class="frame"><div class="mat"><img src="../assets/logos/grs.png" alt="GRS"></div><b>GRS</b><span>Global Recycled Standard</span></div>
+      <div class="frame" style="border-style:dashed;box-shadow:none"><div class="mat" style="border:0"><span class="small" style="text-align:center">Certificate numbers<br>on request</span></div><b>&nbsp;</b><span>&nbsp;</span></div>
+    </div>
+  </div>
+  <div class="foot"><span>Plot No. 236, 6 Million Area, Southern Industrial Zone, 10th of Ramadan City, Egypt · info@silkstone-textile.com</span><span>7</span></div>
+</section>
+
+<!-- 8 · The wardrobe -->
+<section class="page">
+  <div class="head"><span class="brand"><svg viewBox="0 0 104 62" aria-hidden="true"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg>SILKSTONE</span><span>Company profile 2026</span></div>
+  <div class="body">
+    <span class="n">07 · Products</span>
+    <div class="wardrobe">
+      <div>
+        <h2>The <em>wardrobe.</em></h2>
+        <p class="lead" style="margin-top:4mm">Knitted basics for men, women and children, made to the buyer's tech pack. What follows is our standard construction, not a limit: if it is knitted and sewn, send the tech pack and we quote it.</p>
+        <div class="specs" style="grid-template-columns:1fr 1fr;margin-top:6mm">
+          <div class="spec"><h3>T-shirt</h3><p>Single jersey, round neck, rib neckband, set-in sleeve. 140 to 220 gsm.</p></div>
+          <div class="spec"><h3>Long sleeve T-shirt</h3><p>The T-shirt construction with full-length sleeves and ribbed cuffs. 160 to 220 gsm.</p></div>
+          <div class="spec"><h3>Polo</h3><p>Pique, flat-knit collar and cuffs, two or three button placket, side vents. 180 to 240 gsm.</p></div>
+          <div class="spec"><h3>Sweatshirt</h3><p>Crew neck, rib cuffs and hem, loopback or brushed fleece. 260 to 400 gsm.</p></div>
+          <div class="spec"><h3>Hoodie</h3><p>Pullover or full zip, two-piece lined hood, drawcord, kangaroo pocket. 280 to 450 gsm.</p></div>
+          <div class="spec"><h3>Joggers</h3><p>Elasticated drawcord waist, side pockets, ribbed cuffs, tapered or straight. 260 to 400 gsm.</p></div>
+        </div>
+        <p class="small" style="margin-top:5mm">Fabrics: single jersey, interlock, rib, pique, loopback, brushed fleece. Fibre: cotton, organic cotton, recycled cotton and blends, with certificates where claimed. Sizes XS to 3XL, graded to the buyer's chart. Photographs are sample garments until the Silkstone shoot.</p>
+      </div>
+      <div class="rail">
+        <div class="steel"></div>
+        <div class="strip">
+          <div><img src="../assets/img/garment-tshirt-800.webp" alt="">T-shirt</div>
+          <div><img src="../assets/img/garment-longsleeve-800.webp" alt="">Long sleeve</div>
+          <div><img src="../assets/img/garment-polo-800.webp" alt="">Polo</div>
+        </div>
+      </div>
+      <div class="rail" style="grid-column:2">
+        <div class="steel"></div>
+        <div class="strip">
+          <div><img src="../assets/img/garment-sweatshirt-800.webp" alt="">Sweatshirt</div>
+          <div><img src="../assets/img/garment-hoodie-800.webp" alt="">Hoodie</div>
+          <div><img src="../assets/img/garment-joggers-800.webp" alt="">Joggers</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Plot No. 236, 6 Million Area, Southern Industrial Zone, 10th of Ramadan City, Egypt · info@silkstone-textile.com</span><span>8</span></div>
+</section>
+
+<!-- 9 · How we take work -->
+<section class="page white">
+  <div class="head"><span class="brand"><svg viewBox="0 0 104 62" aria-hidden="true"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg>SILKSTONE</span><span>Company profile 2026</span></div>
+  <div class="body">
+    <span class="n">08 · Working with Silkstone</span>
+    <h2>How we <em>take work.</em></h2>
+    <div class="three" style="margin-top:8mm">
+      <div><h3 style="font-size:20pt">CM</h3><p class="muted" style="margin-top:6px">Cut and make. You supply fabric and trims; we cut, sew, finish and pack.</p></div>
+      <div><h3 style="font-size:20pt">CMT</h3><p class="muted" style="margin-top:6px">Cut, make and trim. You supply fabric; we source labels, drawcords, zips and packaging to your specification.</p></div>
+      <div><h3 style="font-size:20pt">FOB</h3><p class="muted" style="margin-top:6px">Full package. We source fabric and trims, produce, and deliver to port.</p></div>
+    </div>
+    <div class="two" style="height:auto;margin-top:8mm;align-items:start">
+      <div class="rows">
+        <div class="row"><div class="k">Minimum</div><div>20,000 pieces per style. Trial orders from 10,000.</div></div>
+        <div class="row"><div class="k">Lead time</div><div>Quoted per order once fabric is confirmed.</div></div>
+        <div class="row"><div class="k">Samples</div><div>Dedicated sample room for proto, fit, pre-production and shipment samples.</div></div>
+        <div class="row"><div class="k">Fabric</div><div>Egyptian mills and partner mills abroad, through Aletex when preferred. Better Cotton, organic and recycled yarn with transaction certificates.</div></div>
+        <div class="row"><div class="k">Decoration</div><div>Print, embroidery and appliqué in house. Labels and hangtags to your artwork.</div></div>
+        <div class="row"><div class="k">Visibility</div><div>Order-based tracking in the ERP; client access to production status and quality reports as they are produced.</div></div>
+      </div>
+      <div>
+        <h3>Every stone in place.</h3>
+        <p class="muted" style="margin-top:6px">One order, followed from roll to sealed carton: roll inspection results, cutting lays with consumption, hourly line output, in-line faults with corrective action, final AQL inspection, and carton scans at sealing and loading. The same record the factory works from is the one the buyer can see.</p>
+        <p class="muted">Clients include H&amp;M, DeFacto and LC Waikiki, and retailers in the United States. References on request.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Plot No. 236, 6 Million Area, Southern Industrial Zone, 10th of Ramadan City, Egypt · info@silkstone-textile.com</span><span>9</span></div>
+</section>
+
+<!-- 10 · Egypt -->
+<section class="page">
+  <div class="head"><span class="brand"><svg viewBox="0 0 104 62" aria-hidden="true"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg>SILKSTONE</span><span>Company profile 2026</span></div>
+  <div class="body">
+    <span class="n">09 · Location</span>
+    <div class="two">
+      <div>
+        <h2>Close to Europe. <em>Built for export.</em></h2>
+        <p class="lead" style="margin-top:4mm">Egypt is the nearest large garment producer to Europe with duty-free access on three sides. It grows its own cotton, spins and knits it, and ships from the Mediterranean. The factory is about an hour from Cairo International Airport.</p>
+        <div class="stamps">
+          <div class="stamp"><b>EU</b><span>Duty free</span><small>Association Agreement, since 2004</small></div>
+          <div class="stamp"><b>UK</b><span>Duty free</span><small>UK-Egypt Association Agreement</small></div>
+          <div class="stamp"><b>US</b><span>Duty free</span><small>QIZ, 35% qualifying content</small></div>
+        </div>
+        <ul class="dash" style="margin-top:6mm">
+          <li><b>Time.</b> Cairo is one to two hours from every European buyer's clock.</li>
+          <li><b>Cotton.</b> Grown, ginned, spun and knitted within a few hours of the factory, with origin documented.</li>
+          <li><b>People.</b> One of the largest garment workforces in the region, with labour and energy costs below Turkey and southern Europe, and WRAP, Sedex and ISO 45001 records showing how people are treated.</li>
+        </ul>
+      </div>
+      <div>
+      <div class="routemap"><div class="crop"><div class="inner">
+        <img src="../assets/img/world.svg" alt="">
+        <svg class="routes" viewBox="0 0 950 620">
+          <g><path d="M543 247 Q500 200 452 214"/><circle cx="452" cy="214" r="3"/><text x="444" y="211" text-anchor="end">Barcelona · 3 to 4 days</text></g>
+          <g><path d="M543 247 Q542 230 536 216"/><circle cx="536" cy="216" r="3"/><text x="546" y="212">Istanbul · 1 to 2 days</text></g>
+          <g><path d="M543 247 Q470 130 470 172"/><circle cx="470" cy="172" r="3"/><text x="462" y="169" text-anchor="end">Rotterdam · 8 to 10 days</text></g>
+          <g><path d="M543 247 Q480 90 500 142"/><circle cx="500" cy="142" r="3"/><text x="508" y="136">Stockholm · 10 to 12 days</text></g>
+          <g><path d="M543 247 Q380 120 246 207"/><circle cx="246" cy="207" r="3"/><text x="254" y="216">New York · 14 to 18 days</text></g>
+          <g class="home"><circle cx="543" cy="247" r="4"/><circle cx="543" cy="247" r="9" class="ring"/><text x="552" y="258">Port Said</text></g>
+        </svg>
+      </div></div></div>
+      <p class="small" style="margin-top:4mm">Typical sea transit from Port Said. Barcelona 3 to 4 days, Istanbul 1 to 2, Rotterdam 8 to 10, Stockholm 10 to 12, New York 14 to 18. Air freight to any European hub in one day.</p>
+      <div class="rows" style="margin-top:5mm"><div class="row"><div class="k">Barcelona</div><div>Aletex, the Spanish partner, one to two hours behind Cairo</div></div><div class="row"><div class="k">London</div><div>Boldbridge Capital, two to three hours behind Cairo</div></div><div class="row"><div class="k">New York</div><div>Six to seven hours behind Cairo, a full morning of overlap</div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Plot No. 236, 6 Million Area, Southern Industrial Zone, 10th of Ramadan City, Egypt · info@silkstone-textile.com</span><span>10</span></div>
+</section>
+
+<!-- 11 · People and responsibility -->
+<section class="page white">
+  <div class="head"><span class="brand"><svg viewBox="0 0 104 62" aria-hidden="true"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg>SILKSTONE</span><span>Company profile 2026</span></div>
+  <div class="body">
+    <span class="n">10 · People and responsibility</span>
+    <div class="two">
+      <div>
+        <h2>Run by the owner, <em>on the floor.</em></h2>
+        <p class="lead" style="margin-top:4mm">Silkstone is led day to day by its owner, from the production floor rather than an office. Buyers deal with him directly.</p>
+        <ul class="dash" style="margin-top:6mm">
+          <li><b>People.</b> A safe, fair and inclusive working environment, with continuous skill development. Employee satisfaction is treated as a driver of stable production.</li>
+          <li><b>Health and safety.</b> Emergency exits on every floor, smart fire alarms and placed extinguishers, audited under ISO 45001, WRAP and SMETA.</li>
+          <li><b>Environment.</b> ISO 14001 environmental management. No hazardous chemicals in stain removal or processing. Organic and recycled fibre programmes under GOTS, OCS, RCS and GRS.</li>
+          <li><b>Governance.</b> Ethical, transparent management; every production and quality record kept in the ERP and open to the buyer.</li>
+        </ul>
+      </div>
+      <div class="two" style="grid-template-columns:1fr 1fr;gap:6mm">
+        <div class="blank"><span>Portrait to follow<br>The owner, on the production floor</span></div>
+        <div class="blank"><span>Photograph to follow<br>Sewing line</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Plot No. 236, 6 Million Area, Southern Industrial Zone, 10th of Ramadan City, Egypt · info@silkstone-textile.com</span><span>11</span></div>
+</section>
+
+<!-- 12 · Contact -->
+<section class="page dark">
+  <div class="head"><span class="brand"><svg viewBox="0 0 104 62" aria-hidden="true"><path d="M44 12 A8 8 0 1 1 52 20 L52 26 L96 49 Q100 51 99 56 M52 26 L8 49 Q4 51 5 56"/></svg>SILKSTONE</span><span>Company profile 2026</span></div>
+  <div class="body">
+    <span class="n">11 · Contact</span>
+    <div class="contact-grid">
+      <div>
+        <h2>Send the tech pack. <em>We quote it.</em></h2>
+        <p class="lead" style="color:#D9D5CC;margin-top:4mm">A quotation, a sample plan or a visit date within one working day. Buyers are welcome on the floor.</p>
+        <dl class="facts" style="margin-top:10mm">
+          <div><dt>Email</dt><dd>info@silkstone-textile.com</dd></div>
+          <div><dt>Website</dt><dd>silkstone-textile.com</dd></div>
+          <div><dt>Factory</dt><dd>Plot No. 236, 6 Million Area, Southern Industrial Zone, 10th of Ramadan City, Egypt</dd></div>
+          <div><dt>LinkedIn</dt><dd>linkedin.com/company/silkstone-fashion</dd></div>
+          <div><dt>Legal name</dt><dd>Silkstone Fashion, trading as Silkstone Textile</dd></div>
+          <div><dt>Tax registration</dt><dd>2889446263266840</dd></div>
+        </dl>
+      </div>
+      <div class="blank" style="background:rgba(243,241,236,.06);border-color:rgba(243,241,236,.25);color:#B4AFA3;background-image:repeating-linear-gradient(135deg,transparent 0 22px,rgba(243,241,236,.06) 22px 23px)"><span>Photograph to follow<br>Factory exterior</span></div>
+    </div>
+  </div>
+  <div class="foot"><span>Plot No. 236, 6 Million Area, Southern Industrial Zone, 10th of Ramadan City, Egypt · info@silkstone-textile.com</span><span>12</span></div>
+</section>
+
+</body>
+</html>
