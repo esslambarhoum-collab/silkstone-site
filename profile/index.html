@@ -88,6 +88,7 @@ p{margin:0 0 .9em;max-width:62ch}
 .stage h3{font-size:11.5pt;margin-bottom:4px}
 .stage p{font-size:8.2pt;color:var(--graphite);line-height:1.45;margin:0}
 .stage .num{font-family:var(--silk);font-style:italic;color:var(--ash);font-size:10pt}
+.stage.closing{display:flex;flex-direction:column;justify-content:flex-end;border-left:1px solid var(--line);padding-left:6mm}
 /* plan */
 .plan{width:100%;height:auto;max-height:118mm;display:block}
 .plan .shell{fill:none;stroke:var(--black);stroke-width:1.2}
@@ -212,10 +213,10 @@ p{margin:0 0 .9em;max-width:62ch}
   <div class="body">
     <span class="n">03 · The way we work</span>
     <div class="two" style="grid-template-columns:1fr 1.1fr;gap:16mm">
-      <div>
+      <div style="display:flex;flex-direction:column;min-height:0">
         <h2>Long-term, <em>and written down.</em></h2>
         <p class="lead" style="margin-top:4mm">We do not chase one-season orders. The factory is built for programmes that repeat: the same basics, in the same quality, delivered to plan year after year. Three commitments hold that together.</p>
-        <figure class="fig" style="height:52mm;margin-top:8mm"><img src="../assets/img/photo-floor-lines-1400.webp" alt="Sewing lines"><figcaption>The sewing floor.</figcaption></figure>
+        <figure class="fig" style="flex:1;min-height:0;margin-top:6mm"><img src="../assets/img/photo-floor-lines-1400.webp" alt="Sewing lines" style="height:100%"><figcaption>The sewing floor.</figcaption></figure>
       </div>
       <div>
         <div class="rows" style="margin-top:2mm">
@@ -245,7 +246,7 @@ p{margin:0 0 .9em;max-width:62ch}
       <div class="stage"><img src="../assets/draw/trims.svg" alt=""><span class="num">05</span><h3>Trims and labels</h3><p>Neck labels, care labels, drawcords, eyelets, snaps, buttons and zips, sourced to the tech pack and pull-tested per batch.</p></div>
       <div class="stage"><img src="../assets/draw/print.svg" alt=""><span class="num">06</span><h3>Print and embroidery</h3><p>Rotary and continuous printing, screen and transfer work, and an embroidery department, all beside the sewing floor.</p></div>
       <div class="stage"><img src="../assets/draw/packing.svg" alt=""><span class="num">07</span><h3>Packing and dispatch</h3><p>Final random inspection to the buyer's AQL, every garment through a calibrated metal detector, then folded, bagged, labelled and packed to the carton ratio. Cartons scanned at sealing and at loading.</p></div>
-      <div class="stage"><figure class="fig" style="height:25mm;margin-bottom:4px"><img src="../assets/img/photo-print-carousel-1400.webp" alt="The print carousel"></figure><span class="num">&nbsp;</span><h3>Nothing subcontracted</h3><p>Every stage above is inside one building under our own supervision, so nothing is untracked and no part of the order is an invoice from a third party.</p></div>
+      <div class="stage closing"><span class="silk" style="display:block;font-size:17pt;line-height:1.2;color:var(--black);margin-bottom:6px">Seven stages.<br>One roof.<br>Nothing subcontracted.</span><p>Every stage is inside one building under our own supervision, so nothing is untracked and no part of the order is an invoice from a third party.</p></div>
     </div>
   </div>
   <div class="foot"><span>Plot No. 236, 6 Million Area, Southern Industrial Zone, 10th of Ramadan City, Egypt · info@silkstone-textile.com</span><span>5</span></div>
